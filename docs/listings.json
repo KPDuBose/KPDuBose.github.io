@@ -1,0 +1,22 @@
+[
+  {
+    "listing": "/main_projects.html",
+    "items": [
+      "/projects/partyGames.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/main_about.html",
+      "/main_projects.html",
+      "/main_spanish.html"
+    ]
+  },
+  {
+    "listing": "/main_spanish.html",
+    "items": [
+      "/spanish/spanish-class-nov2024.html"
+    ]
+  }
+]
