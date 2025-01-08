@@ -1,10 +1,115 @@
 [
   {
-    "objectID": "tournament-announcements/dubose-open2025.html",
-    "href": "tournament-announcements/dubose-open2025.html",
-    "title": "DuBose Open",
+    "objectID": "resumes/Resume_Template.html",
+    "href": "resumes/Resume_Template.html",
+    "title": "Resume",
     "section": "",
-    "text": "The DuBose Open has been hosted in Smithfield, UT since Dec. 2020. This year the tournament will be held in Millcreek, Utah.\nRegistration for the tournament is open until Jan. 3, 2025.\nThe tournament will begin Jan. 4, 2025 at 5 pm.\nRegister\n\nRules\nThe following rules will be implemented in the tournament. If you would like to contest a rule, please contact me.\n\nEach participant must use a single joycon. This is for consistency among the participants.\nThe tournament will be semi-double elimination. If you lose once, you move to the loser bracket. The winners of the loser’s bracket will compete for the last two spots in the final race.\n\n\nThe only exception to the double elimination is the final race between the winners of the winner’s and loser’s bracket. This final race is all or nothing and the winners of the winner’s bracket will not be given another chance.\n\n\nEach match will consist of four races at 150cc. The top two racers move to the next match. Additionally, the following rules will be implemented:\n\n\nCPU’s will be set to the highest difficulty.\nCPU vehicles will be set to any.\nItems will be set to frenzied.\nTrack selection will be random. All race tracks, including DLC, will have equal chance of selection.\nIf time restraints are present, the matches will consist of two races. All other rules remain the same.\n\n\nBrackets will be randomly generated.\nDon’t be a poor sport. Being a poor sport will result in immediate disqualification with no chance of appeal. The following people can make a final and undisputed “poor sport” call:\n\n\nThe tournament organizer, Kline.\nTournament judges: Cassadnra Corry, Nate Corry, and Jackson DuBose.\n\n\nThe prize for winning the tournament is the glory of being the victor."
+    "text": "Name: Your Name\nPhone: Your Phone Number\nEmail: your.email@example.com\nLinkedIn: linkedin.com/in/yourprofile\nGitHub: github.com/yourusername"
+  },
+  {
+    "objectID": "resumes/Resume_Template.html#personal-information",
+    "href": "resumes/Resume_Template.html#personal-information",
+    "title": "Resume",
+    "section": "",
+    "text": "Name: Your Name\nPhone: Your Phone Number\nEmail: your.email@example.com\nLinkedIn: linkedin.com/in/yourprofile\nGitHub: github.com/yourusername"
+  },
+  {
+    "objectID": "resumes/Resume_Template.html#professional-summary",
+    "href": "resumes/Resume_Template.html#professional-summary",
+    "title": "Resume",
+    "section": "Professional Summary",
+    "text": "Professional Summary\nA brief summary highlighting your key skills, experience, and career goals."
+  },
+  {
+    "objectID": "resumes/Resume_Template.html#skills",
+    "href": "resumes/Resume_Template.html#skills",
+    "title": "Resume",
+    "section": "Skills",
+    "text": "Skills\n\nTechnical Skills: Programming languages, software, or tools\nSoft Skills: Communication, leadership, problem-solving, etc."
+  },
+  {
+    "objectID": "resumes/Resume_Template.html#work-experience",
+    "href": "resumes/Resume_Template.html#work-experience",
+    "title": "Resume",
+    "section": "Work Experience",
+    "text": "Work Experience\n\nJob Title\nCompany Name, Location\nMonth Year – Month Year\n\nKey responsibility or achievement\nQuantifiable result or impact\nTools/technologies used\n\n\n\nJob Title\nCompany Name, Location\nMonth Year – Month Year\n\nKey responsibility or achievement\nQuantifiable result or impact\nTools/technologies used"
+  },
+  {
+    "objectID": "resumes/Resume_Template.html#education",
+    "href": "resumes/Resume_Template.html#education",
+    "title": "Resume",
+    "section": "Education",
+    "text": "Education\n\nDegree Name\nInstitution, Location\nMonth Year – Month Year\n\nRelevant coursework or achievements\n\n\n\nDegree Name\nInstitution, Location\nMonth Year – Month Year\n\nRelevant coursework or achievements"
+  },
+  {
+    "objectID": "resumes/Resume_Template.html#certifications",
+    "href": "resumes/Resume_Template.html#certifications",
+    "title": "Resume",
+    "section": "Certifications",
+    "text": "Certifications\n\nCertification Name – Issuing Organization, Month Year\nCertification Name – Issuing Organization, Month Year"
+  },
+  {
+    "objectID": "resumes/Resume_Template.html#projects",
+    "href": "resumes/Resume_Template.html#projects",
+    "title": "Resume",
+    "section": "Projects",
+    "text": "Projects\n\nProject Title\nBrief description of the project, technologies used, and outcomes.\n\n\nProject Title\nBrief description of the project, technologies used, and outcomes."
+  },
+  {
+    "objectID": "resumes/Resume_Template.html#references",
+    "href": "resumes/Resume_Template.html#references",
+    "title": "Resume",
+    "section": "References",
+    "text": "References\nAvailable upon request."
+  },
+  {
+    "objectID": "projects/partyGames.html",
+    "href": "projects/partyGames.html",
+    "title": "partyGames",
+    "section": "",
+    "text": "partyGames\nThe partyGames package was written to simulate different games under a variaty of condidtions.\nCurrently, the package simulates:\n\nWhite Elephant Gift Exchanges\nMonopoly\n\nFurther information about the package, including installation instructions, can be found here.\nBrief information about functionality follows.\n\n\nWhite Elephant Games\nThe following shows how to simulate a white elephant gift game utalizing a 6-sided die and a fair coin.\n\nlibrary(partyGames)\ngames &lt;- simulateElephant(15, dice = TRUE, coins = 1, iter = 1500, pheads = 0.5, sides = 6, numDice = 1)\nsummary.partyGames(games)\n\n$winner\nwinner\n  1   2   3   4   5   6   7   8   9  10  11  12  13  14  15 \n 96 101 101 111 101 108 102  94  97  98  87 106  85 119  94 \n\n$moves\nmoves\n  -6   -5   -4   -3   -2   -1    1    2    3    4    5    6 \n1875 1834 1931 1911 1869 1930 1873 1881 1890 1801 1852 1853 \n\nattr(,\"class\")\n[1] \"elphSum\" \"list\"   \n\nclass(games)\n\n[1] \"elphList\" \"list\"    \n\nplot.partyGames(games)\n\n\n\n\n\n\n\nplot.partyGames(summary.partyGames(games))\n\n\n\nMonopoly Simulation\nAdditionally, you can simulate Monopoly games based on the 2008 US version of the game.\n\nlibrary(partyGames)\nmonopolyGame &lt;- simulateMonopoly()\nmonopolyGame\n\n[[1]]\n [1] 16  9 12 19 15 13 11 18 14 16 18 14 19 13 13 17 13 11 19 17 13  8 19 20 13\n[26] 11 11 23 21 12 15  9 17 16 15 18 13 20 12  7\n\n[[2]]\n [1] 13 13 23 12 16  8 14 11 13 14 27 12 15 17 14 16 14 17  8 14 25 21 16 15 15\n[26] 13 17 11 16 15 13 11 16 19 12 15 19  7  9 13\n\n[[3]]\n [1] 13 14 13 10 18 14 14  9 15 22 17 11 16 16 19 14  9 13 15 23 16 19 16 11 11\n[26] 14 20 14 14 10 18 16 17 15 13 15 16 12 11 14\n\n[[4]]\n [1] 15 15 15 15 13 15 20 18 14 14 19  9 16 17 11 16 13 20 16 13 19 14 13 21 19\n[26] 14 15 10 11 17 19 14 20 14 12 12 15 20 14  9\n\n[[5]]\n [1] 10 17  8 15 14 13 15 13  9 17 23 19  9 15 14 10 22 10 21  7 10 15 19 23 17\n[26]  7 15 12 11 14  7 23 14 13 18 12 14 17 15 17\n\n[[6]]\n [1] 13 16 12 10 16 12 13 16 18 11 20 20 19  8 14 14 17 16 17 19 15 15 12 14 14\n[26] 14 10 19 16 21 11  9 13 16 18 13 17 16 16  7\n\n[[7]]\n [1] 16  7 13 11 18 14 15 13 15  7 20  8 15 14 15 16 13 13 18 12 11 17 14 20 13\n[26] 10 18 17 15 12 15 16 15 13 10 16 16 16  9  9\n\n[[8]]\n [1] 13 14 17 10  9 14 16 19 16 19 20 12 10 16 13 12 11 16 20 18 11 15 17 12 14\n[26]  9 22 15 12 12 19 16  8 14 18 13 12 17 14 17\n\n[[9]]\n [1] 13 11 10 13 14 17 13 18 16 20 18 17 18 15 14 11 20 11 10 15 23 13 20 11 13\n[26] 19 15 15 13 14 19  9 18 13 15 10 12 19 17 15\n\n[[10]]\n [1]  7 13  8 19 12 13 14 25  9 10 26 12 11 11 12 16 18 16 17 18 14 12 14 22  9\n[26] 13 19 15 13 14 13 13 10 18 24 11 16 10 12 21\n\nattr(,\"class\")\n[1] \"monopoly\" \"list\"    \n\nsummary.monopoly(monopolyGame)\n\n  1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20 \n129 129 131 134 145 133 145 160 139 150 208 134 148 142 139 142 150 143 161 156 \n 21  22  23  24  25  26  27  28  29  30  31  32  33  34  35  36  37  38  39  40 \n157 149 160 169 138 124 162 151 142 141 149 136 148 151 155 135 150 154 129 129 \nattr(,\"class\")\n[1] \"monoSum\" \"numeric\"\n\nplot.monopoly(monopolyGame)\n\n\n\n\n\n\n\n\nParallel computing, through OpenMP, is also implemented as demonstrated here:\n\nmonoParallel &lt;- simulateMonopoly(numGames = 20, \n                                 maxTurns = 500, \n                                 sides    = 6, \n                                 numDice  = 2, \n                                 cores    = 3)\n\nsummary.monopoly(monoParallel)\n\n  1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20 \n265 256 286 276 262 284 269 294 312 259 420 294 268 288 284 294 276 318 294 333 \n 21  22  23  24  25  26  27  28  29  30  31  32  33  34  35  36  37  38  39  40 \n308 302 304 292 339 309 297 259 275 279 284 295 290 301 274 313 293 299 297 254 \nattr(,\"class\")\n[1] \"monoSum\" \"numeric\"\n\nplot.monopoly(monoParallel)"
+  },
+  {
+    "objectID": "main_projects.html",
+    "href": "main_projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "A current list past and current projects.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\npartyGames\n\n\nA Simulation Package in R\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome",
+    "section": "",
+    "text": "Welcome to my website! Here you will find previous projects, current projects I can share, contact information, and more!\nIf there are any questions, comments, or concerns, please feel free to contact me.\nThe following is currently available:\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nTitle\n\n\n\n\n\n\nKline DuBose\n\n\n\n\nProjects\n\n\n\n\nSpanish Classes\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "main_about.html",
+    "href": "main_about.html",
+    "title": "Kline DuBose",
+    "section": "",
+    "text": "Kline DuBose is a Graduate Research Assistant and PhD Student at the University of Utah. He has helped with data cleaning and data analysis on numerous research projects. His research interests include clinical trials, trial design, and exact tests."
+  },
+  {
+    "objectID": "main_about.html#education",
+    "href": "main_about.html#education",
+    "title": "Kline DuBose",
+    "section": "Education",
+    "text": "Education\nUniversity of Utah | Salt Lake City, UT\nPhD in Biostatistics | Aug 2022 - Present\nUtah State University | Logan, UT\nB.S. in Statistics | Jan 2019 - May 2022"
+  },
+  {
+    "objectID": "main_about.html#experience",
+    "href": "main_about.html#experience",
+    "title": "Kline DuBose",
+    "section": "Experience",
+    "text": "Experience\nUniversity of Utah, DELPHI | T.A. for R Coding Bootcamp | June 2023 - Present\nUniversity of Utah | Graduate Research Assistant | Aug 2022 - Present\nUtah State University | Recitation Leader, Grader | Aug 2020 - May 2022"
+  },
+  {
+    "objectID": "main_spanish.html",
+    "href": "main_spanish.html",
+    "title": "Spanish Classes",
+    "section": "",
+    "text": "Notes used when teaching Spanish classes.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSpanish Cheat Sheet\n\n\n\n\n\n\nKline DuBose\n\n\nJan 8, 2025\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "spanish/spanish-class-nov2024.html",
@@ -54,54 +159,5 @@
     "title": "Spanish Cheat Sheet",
     "section": "La macarena",
     "text": "La macarena\n\nMostly English\n\n\n\nSpanish (OG)\n\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nMacarena tiene un novio que se llama\nQue se llama de apellido Vitorino\nY en la jura de bandera del muchacho\nSe la dio con dos amigos, ay\nMacarena tiene un novio que se llama\nQue se llama de apellido Vitorino\nY en la jura de bandera del muchacho\nSe la dio con dos amigos, ay\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nMacarena, Macarena, Macarena\nQue te gustan los veranos de Marbella\nMacarena, Macarena, Macarena\nQue te gusta la movida guerrillera, ay\nAy\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nMacarena sueña con el corte inglés\nY se compra los modelos más modernos\nLe gustaría vivir en Nueva York\nY ligar un novio nuevo, ay\nMacarena sueña con el corte inglés\nY se compra los modelos más modernos\nLe gustaría vivir en Nueva York\nY ligar un novio nuevo, ay\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nMacarena tiene un novio que se llama\nQue se llama de apellido Vitorino\nY en la jura de bandera del muchacho\nSe la dio con dos amigos, ay\nMacarena tiene un novio que se llama\nQue se llama de apellido Vitorino\nY en la jura de bandera del muchacho\nSe la dio con dos amigos, ay\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nAy\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena"
-  },
-  {
-    "objectID": "main_spanish.html",
-    "href": "main_spanish.html",
-    "title": "Spanish Classes",
-    "section": "",
-    "text": "Notes used when teaching Spanish classes.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSpanish Cheat Sheet\n\n\n\n\n\n\nKline DuBose\n\n\nDec 25, 2024\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "main_about.html",
-    "href": "main_about.html",
-    "title": "Kline DuBose",
-    "section": "",
-    "text": "Kline DuBose is a Graduate Research Assistant and PhD Student at the University of Utah. He has helped with data cleaning and data analysis on numerous research projects. His research interests include clinical trials, trial design, and exact tests."
-  },
-  {
-    "objectID": "main_about.html#education",
-    "href": "main_about.html#education",
-    "title": "Kline DuBose",
-    "section": "Education",
-    "text": "Education\nUniversity of Utah | Salt Lake City, UT\nPhD in Biostatistics | Aug 2022 - Present\nUtah State University | Logan, UT\nB.S. in Statistics | Jan 2019 - May 2022"
-  },
-  {
-    "objectID": "main_about.html#experience",
-    "href": "main_about.html#experience",
-    "title": "Kline DuBose",
-    "section": "Experience",
-    "text": "Experience\nUniversity of Utah, DELPHI | T.A. for R Coding Bootcamp | June 2023 - Present\nUniversity of Utah | Graduate Research Assistant | Aug 2022 - Present\nUtah State University | Recitation Leader, Grader | Aug 2020 - May 2022"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome",
-    "section": "",
-    "text": "Welcome to my website! Here you will find previous projects, current projects I can share, contact information, and more!\nIf there are any questions, comments, or concerns, please feel free to contact me.\nThe following is currently available:\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nTitle\n\n\n\n\n\n\nKline DuBose\n\n\n\n\nProjects\n\n\n\n\nSpanish Classes\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "main_projects.html",
-    "href": "main_projects.html",
-    "title": "Projects",
-    "section": "",
-    "text": "A current list past and current projects.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\npartyGames\n\n\nA Simulation Package in R\n\n\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "projects/partyGames.html",
-    "href": "projects/partyGames.html",
-    "title": "partyGames",
-    "section": "",
-    "text": "partyGames\nThe partyGames package was written to simulate different games under a variaty of condidtions.\nCurrently, the package simulates:\n\nWhite Elephant Gift Exchanges\nMonopoly\n\nFurther information about the package, including installation instructions, can be found here.\nBrief information about functionality follows.\n\n\nWhite Elephant Games\nThe following shows how to simulate a white elephant gift game utalizing a 6-sided die and a fair coin.\n\nlibrary(partyGames)\ngames &lt;- simulateElephant(15, dice = TRUE, coins = 1, iter = 1500, pheads = 0.5, sides = 6, numDice = 1)\nsummary.partyGames(games)\n\n$winner\nwinner\n  1   2   3   4   5   6   7   8   9  10  11  12  13  14  15 \n 89  94 117  90 116 119  92 100  89  99 106 112  96  93  88 \n\n$moves\nmoves\n  -6   -5   -4   -3   -2   -1    1    2    3    4    5    6 \n1903 1937 1853 1907 1860 1852 1891 1823 1921 1853 1792 1908 \n\nattr(,\"class\")\n[1] \"elphSum\" \"list\"   \n\nclass(games)\n\n[1] \"elphList\" \"list\"    \n\nplot.partyGames(games)\nplot.partyGames(summary.partyGames(games))\n\n\n\n\n\n\n\n\n\n\nMonopoly Simulation\nAdditionally, you can simulate Monopoly games based on the 2008 US version of the game.\n\nlibrary(partyGames)\nmonopolyGame &lt;- simulateMonopoly()\nmonopolyGame\n\n[[1]]\n [1]  9 16 10 18 10 21 12 14 15 14 21 10 22 11 19 16 13 10 15 16 11 16 14 21 17\n[26] 17 10 13 13 18 10 18 13 13 14 12 13 16 21 13\n\n[[2]]\n [1] 13 22 17 18 14 12 13 21 15 15 21 12 20 15 11 11 13 17  9 20 16 16 19 16 14\n[26] 10 13 17 21 18  7 14 15 16  8 20 11 17 12 12\n\n[[3]]\n [1] 16 10 11 10 19 13 21 12 12  9 18 15 17 14 15 10 17 13 20 17 14 13 19 14 18\n[26] 20 15 11 14 13 13  7 17 19 14 20 18 15  8 13\n\n[[4]]\n [1] 16 11 17 15 12 18 13 16 15 11 21 14 10 10 18 14 13 15 17 16 12 15  8 19  9\n[26] 20 16 15 13 11  9 19 17  9 18 17 11 15 15 14\n\n[[5]]\n [1] 14 11 11 13 18 13 15 21 12  8 26 12 17 15 12 15 13 12 20 15 15 10 14 20 11\n[26] 15 16  9 21 16 11 10 18 18 13 19 15 11 27  6\n\n[[6]]\n [1] 19 14 12 16 12 11 18 15 12 21 18 14  9 19 10 15 22 16 17 21 14 14 13 12 11\n[26] 16 13 17 19  7 13 18 13 17  9 17 14 15 11 12\n\n[[7]]\n [1]  9 15 12 18 10 15 10 16 15 11 29 12 12 16 16 17 15 16 10 16 19 17 16 13 11\n[26] 18 17 11 23 12 17 14 11 13 17 20 15 12 17 16\n\n[[8]]\n [1] 13 13 17 14 19  8 19  9  9 18 25 15 14 17 12 17 17 16 17 15 19  7 14 14 22\n[26] 19 14 11 13 13 11 15 21 10 14 12 16 14 10 15\n\n[[9]]\n [1] 17 17 14 13  8 15 21 14 14 13 23 16 10 12 21 12 16 18 13 13 15 15 12 18 19\n[26] 10 15 11 14 16 18 15 13 18 15 17 10 15 13 21\n\n[[10]]\n [1] 16 13 10 14  9 17 15 17 16 25 22 16 16 12 11 20 12 20  8 16 18 15 21 13 12\n[26] 12 16 11 15 20 13  9 14 21 11 17 14 12 13 14\n\nattr(,\"class\")\n[1] \"monopoly\" \"list\"    \n\nsummary.monopoly(monopolyGame)\n\n  1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20 \n142 142 131 149 131 143 157 155 135 145 224 136 147 141 145 147 151 153 146 165 \n 21  22  23  24  25  26  27  28  29  30  31  32  33  34  35  36  37  38  39  40 \n153 138 150 160 144 157 145 126 166 144 122 139 152 154 133 171 137 142 147 136 \nattr(,\"class\")\n[1] \"monoSum\" \"numeric\"\n\nplot.monopoly(monopolyGame)\n\n\n\n\n\n\n\n\nParallel computing, through OpenMP, is also implemented as demonstrated here:\n\nmonoParallel &lt;- simulateMonopoly(numGames = 20, \n                                 maxTurns = 500, \n                                 sides    = 6, \n                                 numDice  = 2, \n                                 cores    = 3)\n\nsummary.monopoly(monoParallel)\n\n  1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20 \n285 275 268 281 285 272 287 300 296 284 445 258 277 279 281 274 288 335 291 302 \n 21  22  23  24  25  26  27  28  29  30  31  32  33  34  35  36  37  38  39  40 \n308 323 306 293 301 323 276 283 274 282 288 247 294 338 297 338 269 283 240 260 \nattr(,\"class\")\n[1] \"monoSum\" \"numeric\"\n\nplot.monopoly(monoParallel)"
   }
 ]
