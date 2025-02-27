@@ -1,9 +1,9 @@
 ---
-title: "Make a Quarto Website"
+title: "How to Make a Quarto Website"
 author: Kline DuBose
 date: last-modified
 format:
-  html:
+  html: 
     code-fold: true
     embed-resources: true
 execute: 

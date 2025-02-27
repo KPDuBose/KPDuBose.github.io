@@ -1,7 +1,0 @@
----
-title: "Test"
-format:
-  pdf: default
----
-
-This is a test to see how feasible it is to link a pdf document to a quarto website
