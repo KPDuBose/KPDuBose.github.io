@@ -1,0 +1,86 @@
+
+---
+title: "Resume"
+author: "Your Name"
+fontsize: 11pt
+geometry: margin=1in
+output:
+  pdf_document:
+    latex_engine: xelatex
+    keep_tex: true
+header-includes:
+  - \usepackage{fontspec}
+  - \setmainfont{Times New Roman}
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+library(dplyr)
+opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+## Personal Information
+
+- **Name**: Your Name
+- **Phone**: Your Phone Number
+- **Email**: your.email@example.com
+- **LinkedIn**: [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)
+- **GitHub**: [github.com/yourusername](https://github.com/yourusername)
+
+## Professional Summary
+
+A brief summary highlighting your key skills, experience, and career goals.
+
+## Skills
+
+- **Technical Skills**: Programming languages, software, or tools
+- **Soft Skills**: Communication, leadership, problem-solving, etc.
+
+## Work Experience
+
+### Job Title
+**Company Name**, Location  
+Month Year – Month Year
+
+- Key responsibility or achievement
+- Quantifiable result or impact
+- Tools/technologies used
+
+### Job Title
+**Company Name**, Location  
+Month Year – Month Year
+
+- Key responsibility or achievement
+- Quantifiable result or impact
+- Tools/technologies used
+
+## Education
+
+### Degree Name
+**Institution**, Location  
+Month Year – Month Year
+
+- Relevant coursework or achievements
+
+### Degree Name
+**Institution**, Location  
+Month Year – Month Year
+
+- Relevant coursework or achievements
+
+## Certifications
+
+- Certification Name – Issuing Organization, Month Year
+- Certification Name – Issuing Organization, Month Year
+
+## Projects
+
+### Project Title
+Brief description of the project, technologies used, and outcomes.
+
+### Project Title
+Brief description of the project, technologies used, and outcomes.
+
+## References
+
+Available upon request.

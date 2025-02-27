@@ -1,0 +1,8 @@
+---
+title: "Presentations"
+listing: 
+  contents: presentations
+  type: grid
+---
+
+Notes and presentations done for different groups. Some of these projects are unrelated to my research interests, but are helpful to different groups I have talked to. 

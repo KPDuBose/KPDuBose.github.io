@@ -1,0 +1,41 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"DuBose Open\"\n",
+        "subtitle: \"2025\"\n",
+        "---\n",
+        "\n",
+        "```{css, echo = FALSE}\n",
+        ".center {\n",
+        "  text-align: center !important\n",
+        "}\n",
+        "```\n",
+        "\n",
+        "\n",
+        "The DuBose Open has been hosted in Smithfield, UT since Dec. 2020. \n",
+        "\n",
+        "Registration for the tournament is open until Jan. 3, 2025. The tournament will begin Jan. 4, 2025 at noon. \n",
+        "\n",
+        ":::{.center}\n",
+        "\n",
+        "[Register](https://forms.gle/AGUv7rhgCf4EynL66){.btn .btn-outline-primary .btn role=\"button\" data-toggle=\"tooltip\" title=\"Here's a tooltip\"}\n",
+        "\n",
+        ":::"
+      ],
+      "id": "8557c2a1"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

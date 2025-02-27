@@ -1,0 +1,37 @@
+---
+title: "Welcome"
+listing:
+  contents:
+    - "main_*.qmd"
+  type: table
+  fields: [title]
+about:
+  template: jolla
+  image: dubose_headshot.jpg
+  links:
+    - icon: twitter-x
+      text: X
+      href: https://x.com/KlineDuBose
+    - icon: github
+      text: GitHub
+      href: https://github.com/KPDuBose
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/kline-dubose/
+    - icon: envelope
+      text: E-Mail
+      href: mailto:kline.dubose@utah.edu
+    - icon: file-earmark-arrow-down
+      text: CV
+      href: cv.qmd
+---
+
+Welcome to my website! Here you will find previous projects, current projects I can share, contact information, and more!
+
+If there are any questions, comments, or concerns, please feel free to [contact me](mailto:kline.dubose@utah.edu).
+
+The following is currently available:
+
+
+
+

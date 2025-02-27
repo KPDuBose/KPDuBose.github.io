@@ -1,0 +1,94 @@
+
+---
+title: "Curriculum Vitae"
+author: "Your Name"
+fontsize: 11pt
+geometry: margin=1in
+format: pdf
+header-includes:
+  - \usepackage{fontspec}
+  - \setmainfont{Times New Roman}
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+library(dplyr)
+opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+## Personal Information
+
+- **Name**: Your Name
+- **Address**: Your Address
+- **Phone**: Your Phone Number
+- **Email**: your.email@example.com
+- **LinkedIn**: [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)
+- **GitHub**: [github.com/yourusername](https://github.com/yourusername)
+
+## Objective
+
+A concise statement about your professional goals and what you aim to achieve in your career.
+
+## Education
+
+### Degree Name
+**Institution**, Location  
+Month Year – Month Year
+
+- Key coursework or achievements
+- Honors or awards
+
+### Degree Name
+**Institution**, Location  
+Month Year – Month Year
+
+- Key coursework or achievements
+- Honors or awards
+
+## Professional Experience
+
+### Job Title
+**Company Name**, Location  
+Month Year – Month Year
+
+- Description of responsibilities and achievements
+- Quantifiable results (e.g., "Increased sales by 20%")
+- Technologies or tools used
+
+### Job Title
+**Company Name**, Location  
+Month Year – Month Year
+
+- Description of responsibilities and achievements
+- Quantifiable results (e.g., "Reduced processing time by 30%")
+- Technologies or tools used
+
+## Skills
+
+- **Technical Skills**: List of programming languages, software, or tools
+- **Soft Skills**: Leadership, teamwork, communication, etc.
+
+## Projects
+
+### Project Title
+Brief description of the project. Include technologies used and outcomes achieved.
+
+### Project Title
+Brief description of the project. Include technologies used and outcomes achieved.
+
+## Papers and Posters for Conferences
+
+1. **Author(s)**. "Paper/Poster Title." *Conference Name*, Location, Month Year. 
+   - Brief description of the topic and significance.
+
+2. **Author(s)**. "Paper/Poster Title." *Conference Name*, Location, Month Year. 
+   - Brief description of the topic and significance.
+
+## Certifications
+
+- Certification Name – Issuing Organization, Month Year
+- Certification Name – Issuing Organization, Month Year
+
+## References
+
+Available upon request.

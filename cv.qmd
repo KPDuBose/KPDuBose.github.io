@@ -1,0 +1,150 @@
+---
+author: Kline DuBose
+title: Graduate Research Assistant, PhD Student
+format:
+  classic-cv-pdf: default
+cvfooter:
+  left: "kpdubose.github.io"
+  right: "github.com/KPDuBose"
+cvcolor: 58748F #without `#`
+cvfont: raleway #texlive fonts like raleway,fetamont,gillius,comfortaa
+cvmeta:
+  - title: Status
+    left: Research Assistant, University of Utah
+    right: 295 Chipeta Way, 3rd Floor
+  - title: Phone
+    left: (435) 258 - 7509
+    right: Salt Lake City, UT 84108
+  - title: E-mail (work)
+    left: kline.dubose@utah.edu
+  - title: E-mail
+    left: kline.dubose@hotmail.com
+execute:
+  echo: false
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+#| label: cvevents
+cvevents <- function(tbl, when, what, where, details) {
+
+    command_start <- "\\cvevent"
+
+    res <- paste0(
+        command_start, "{", tbl[[when]], "}", 
+        "{", tbl[[what]], "}",
+        "{", tbl[[where]], "}")
+    
+    tbl[[details]] <- sapply(tbl[[details]], function(x) paste0("{", x, "}", collapse = ","))
+    res <- paste0(res, "{",tbl[[details]],"}")
+
+    cat(res, sep = "\n")
+}
+
+skills <- function(tbl, what, details) {
+
+    command_start <- "\\skills"
+
+    res <- paste0(
+        command_start,  
+        "{", tbl[[what]], "}")
+    
+    tbl[[details]] <- sapply(tbl[[details]], function(x) paste0("{", x, "}", collapse = ", "))
+    res <- paste0(res, "{",tbl[[details]],"}")
+
+    cat(res, sep = "\n")
+}
+
+reference <- function(tbl, ref) {
+
+    command_start <- "\\hangMe"
+
+    res <- paste0(
+      command_start,
+      "{", tbl[[ref]], "}"
+    )
+
+    cat(res, sep = "\n\n")
+}
+```
+
+# Education
+
+```{r }
+#| label: education
+#| output: asis
+tibble::tribble(
+    ~degree, ~uni, ~loc, ~dates, ~details,
+    "Ph.D. in Biostatistics", "University of Utah", "Salt Lake City, UT", "Aug. 2022 - Present", c("Department: Population Health Sciences"),
+    "B.S. in Statistics", "Utah State University", "Logan, UT", "Jan. 2019 - May 2022", c("Minor: Mathematics")
+) |>
+    cvevents(when = "dates", what = "degree", where = "uni", details = "details")
+```
+
+# Reserach Experience
+
+```{r}
+#| label: research
+#| output: asis
+
+tibble::tribble(
+  ~role, ~institution, ~date, ~details, ~tasks,
+  "Graduate Research Assistant", "University of Utah", "Aug. 2022 - Present", "placeholder", c("Help researchers assess statistical feasebility of research", 
+                                                                                               "\\textit{PT-IN-MIND}: NIH funded feaseability trial. Data safety monitor. Generated reports for IMC meetings. (2023 - Present)", 
+                                                                                               "\\textit{ImmPETUS}: Study conducted to examine the social health impacts of different cancers. Helped with numerous analyses and data cleaning. (2023 - 2024)",
+                                                                                               "\\textit{INTERSECT}: Study using flatiron data to examine socioeconimic differences in patients receiving immunotherapy. Helped with numerous analyses and data cleaning. (2023-2024)")
+  
+) |>
+  cvevents(when = "date", what = "role", where = "institution", details = "tasks")
+```
+
+# Teaching Experience
+
+```{r}
+#| label: experience
+#| output: asis
+tibble::tribble(
+    ~role, ~institution, ~dates, ~details, ~tasks,
+    "Teaching Assistant - R Coding Bootcamp", "University of Utah", "June 2023 - Present", "DELPHI", c("Helped teach introductory and advanced R Coding Bootcamps", "Provided assitance, as needed, to participants in the bootcamps"),
+    "Teaching Assistant - Ordinary Differential Equations", "Utah State University", "Jan. 2022 - May 2022", "Dept. of Mathematics", c("Graded student assignments", "Hosted office hours"),
+    "Recitation Leader - Introduction to Statistics", "Utah State University", "Aug. 2021 - May 2022", "Aggie Math Learning Center", c("Provided additional instruction to Introduction to Statistics course", "Tutored Students"),
+    "Recitation Leader - Statistical Methods", "Utah State University", "Jan. 2021 - May 2021", "Aggie Math Learning Center", c("Provided additional instruction to Statistical Methods course", "Graded homework", "Tutored Students")
+) |>
+    cvevents(when = "dates", what = "role", where = "institution", details = "tasks")
+```
+
+# Technical Skills
+
+```{r}
+#| label: tech_skills
+#| output: asis
+tibble::tribble(
+  ~skill, ~det,
+  "Programing Language", c("R", "SAS", "C++", "Python"),
+  "Language", c("English", "Spanish")
+) |> skills(what = "skill", details = "det")
+```
+
+\newpage
+
+# Presentations
+
+```{r}
+#| label: poster_presentations
+#| output: asis
+tibble::tribble(
+  ~reference,
+  "Tay, DL, \\textbf{Dubose, K}, Chipman, J, Alnajar,M, Ellington, L, Iacob, E, Stephens, C, \\& Ornstein, KA. (September 2024). Risk of mental health disorders in bereavement: A population-based analysis of lung cancer spouses. Late breaker poster accepted to the National Center on Family Support’s 3rd Biennial Conference on Caregiving Research, Pittsburgh, PA.",
+  "Tay, D. L., \\textbf{Dubose, K.}, Meeks, H., Guo, J-W., Alekhina, N., Feldner, K., Sheng, X. Chipman, J., Ellington, L., \\& Hashibe, M.. (March, 2024). Inpatient and ED use among melanoma and lung cancer patients receiving immune checkpoint inhibitors. Poster accepted to the 2024 State of the Science in Hospice and Palliative Care, Phoenix, AZ."
+) |> reference(ref = "reference")
+```
+
+
+
+<!-- # Publications -->
+
+# References
+
+Avaliable upon request
+

@@ -1,0 +1,11 @@
+---
+title: Page Not Found
+---
+
+Well, friend, despite our best efforts, we've led you astray. 
+
+Please go [home](index.qmd) and try again. 
+
+If you continue to find your way back to this page, please [contact me](mailto:kline.dubose@utah.edu). The page you're looking for might have been deleted or moved. 
+
+Good luck!

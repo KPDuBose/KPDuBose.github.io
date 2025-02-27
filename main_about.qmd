@@ -1,0 +1,45 @@
+---
+title: "Kline DuBose"
+about:
+  template: trestles
+  image: dubose_headshot.jpg
+  links:
+    - icon: twitter-x
+      text: X
+      href: https://x.com/KlineDuBose
+    - icon: github
+      text: GitHub
+      href: https://github.com/KPDuBose
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/kline-dubose/
+    - icon: envelope
+      text: E-Mail
+      href: mailto:kline.dubose@utah.edu
+    - icon: file-earmark-arrow-down
+      text: CV
+      href: cv.qmd
+---
+
+Kline DuBose is a Graduate Research Assistant and PhD Student at the University of Utah. He has helped with data cleaning and data analysis on numerous research projects. His research interests include clinical trials, trial design, and exact tests. 
+
+## Education
+
+**University of Utah** | Salt Lake City, UT                                         
+PhD in Biostatistics | Aug 2022 - Present
+
+
+**Utah State University** | Logan, UT                                             
+B.S. in Statistics | Jan 2019 - May 2022
+
+## Experience
+
+**University of Utah**, DELPHI | T.A. for R Coding Bootcamp | June 2023 - Present
+
+**University of Utah** | Graduate Research Assistant | Aug 2022 - Present
+
+**Utah State University** | Recitation Leader, Grader | Aug 2020 - May 2022
+
+
+
+

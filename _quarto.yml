@@ -1,0 +1,44 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - "*.qmd"
+    - "!tournament-announcements/"
+    - "!resumes/"
+
+website:
+  title: "Kline DuBose"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: main_about.qmd
+        text: About
+      - href: main_projects.qmd
+        text: Projects
+  page-footer:
+    background: light
+    left:
+      - icon: twitter-x
+        href: https://x.com/KlineDuBose
+      - icon: github
+        href: https://github.com/KPDuBose
+      - icon: linkedin
+        href: https://www.linkedin.com/in/kline-dubose/
+      - icon: envelope
+        href: mailto:kline.dubose@utah.edu
+    right:
+      - "295 Chipeta Way, 3rd Floor
+         Salt Lake City, UT 84108
+         United States"
+
+format:
+  html:
+    theme: 
+      - morph
+      - custom.scss
+    css: styles.css
+    toc: true
+
+
+

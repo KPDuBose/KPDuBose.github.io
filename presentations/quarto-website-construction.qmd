@@ -1,0 +1,21 @@
+---
+title: "Make a Quarto Website"
+author: Kline DuBose
+date: last-modified
+format:
+  html:
+    code-fold: true
+    embed-resources: true
+execute: 
+  warning: false
+  echo: true
+  cache: true
+editor_options: 
+  chunk_output_type: console
+---
+
+# Making a Quarto Website
+
+## This is a test
+
+I'm trying to figure out if I can make a website and have a reveal presentation as a page on it. 

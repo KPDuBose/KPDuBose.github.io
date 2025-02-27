@@ -1,0 +1,60 @@
+---
+title: "partyGames"
+subtitle: "A Simulation Package in R"
+author: "Kline DuBose"
+image: Board_Game_Dice_Roll.png
+---
+
+# partyGames
+
+The partyGames package was written to simulate different games under a variaty of condidtions. 
+
+Currently, the package simulates:
+
+- White Elephant Gift Exchanges
+- Monopoly
+
+Further information about the package, including installation instructions, can be found [here](https://github.com/KPDuBose/partyGames).
+
+Brief information about functionality follows.
+
+# White Elephant Games
+
+The following shows how to simulate a white elephant gift game utalizing a 6-sided die and a fair coin.
+
+```{r example-monopoly}
+library(partyGames)
+games <- simulateElephant(15, dice = TRUE, coins = 1, iter = 1500, pheads = 0.5, sides = 6, numDice = 1)
+summary.partyGames(games)
+class(games)
+plot.partyGames(games)
+plot.partyGames(summary.partyGames(games))
+```
+
+# Monopoly Simulation
+
+Additionally, you can simulate Monopoly games based on the 2008 US version of the game. 
+
+```{r}
+
+library(partyGames)
+monopolyGame <- simulateMonopoly()
+monopolyGame
+summary.monopoly(monopolyGame)
+plot.monopoly(monopolyGame)
+
+```
+
+Parallel computing, through OpenMP, is also implemented as demonstrated here:
+
+```{r}
+monoParallel <- simulateMonopoly(numGames = 20, 
+                                 maxTurns = 500, 
+                                 sides    = 6, 
+                                 numDice  = 2, 
+                                 cores    = 3)
+
+summary.monopoly(monoParallel)
+plot.monopoly(monoParallel)
+```
+
