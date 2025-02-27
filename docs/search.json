@@ -1,24 +1,59 @@
 [
   {
-    "objectID": "projects/partyGames.html",
-    "href": "projects/partyGames.html",
-    "title": "partyGames",
+    "objectID": "presentations/spanish-class-nov2024.html",
+    "href": "presentations/spanish-class-nov2024.html",
+    "title": "Spanish Cheat Sheet",
     "section": "",
-    "text": "partyGames\nThe partyGames package was written to simulate different games under a variaty of condidtions.\nCurrently, the package simulates:\n\nWhite Elephant Gift Exchanges\nMonopoly\n\nFurther information about the package, including installation instructions, can be found here.\nBrief information about functionality follows.\n\n\nWhite Elephant Games\nThe following shows how to simulate a white elephant gift game utalizing a 6-sided die and a fair coin.\n\nlibrary(partyGames)\ngames &lt;- simulateElephant(15, dice = TRUE, coins = 1, iter = 1500, pheads = 0.5, sides = 6, numDice = 1)\nsummary.partyGames(games)\n\n$winner\nwinner\n  1   2   3   4   5   6   7   8   9  10  11  12  13  14  15 \n 94  87 103  88 102 102  94 109 107  81 105 119 109  91 109 \n\n$moves\nmoves\n  -6   -5   -4   -3   -2   -1    1    2    3    4    5    6 \n1884 1903 1828 1867 1848 1875 1844 1854 1893 1890 1914 1900 \n\nattr(,\"class\")\n[1] \"elphSum\" \"list\"   \n\nclass(games)\n\n[1] \"elphList\" \"list\"    \n\nplot.partyGames(games)\n\n\n\n\n\n\n\nplot.partyGames(summary.partyGames(games))\n\n\n\nMonopoly Simulation\nAdditionally, you can simulate Monopoly games based on the 2008 US version of the game.\n\nlibrary(partyGames)\nmonopolyGame &lt;- simulateMonopoly()\nmonopolyGame\n\n[[1]]\n [1] 17 10 11 15  9 17 18 12 12 11 24 17 14 15 16 14 15 13 18 12 16 18 16 12 14\n[26]  6 15 20 13 13 12 17 18 19 18  8  6 14 10 19\n\n[[2]]\n [1] 12 10 14 12 15  9 15 20 17 16 24  8 12  9 12 19 11 25 14 20 11 13 20 10 16\n[26] 20 16 12 17  9  8 10 17 16 11 17 14 18  9 13\n\n[[3]]\n [1] 10 10 20 18 16 13 13 15 13 18 22 15 12  8 17 16 18 21 13 17 15 12 20  6 16\n[26] 15 13 11 20 10 16 17 11  9 20 17 12 15 13 11\n\n[[4]]\n [1] 14 18 10 14 12 20 11 11 18 13 18 18 16 13 12 16 18 11 18 17 21 12 15 16 10\n[26] 13 16 16 15 12 15 13 18 16 14  7 11 15 12 20\n\n[[5]]\n [1]  9 14 17 12 17 16 14 15 17 16 30 10 13 14 12 13 25 13 18 15 13 13 17 14 14\n[26] 18 11 17 11 17 11 11 15 14 15 13 14 18 12 17\n\n[[6]]\n [1] 16  8 12  9 11 18 16 12 16 18 16  9 21 15 10 15 18 14 13 12 21 14 15 11 10\n[26] 16 10 15 14 22 13 16 14 11  9 16 16 17 16 15\n\n[[7]]\n [1] 20 13 16 13 10 15 20 19 14 15 13 12 13 32 14 14 13 13 12 20 20 13 17 13 16\n[26] 12 24 14 12 14 17 13 12 17 20 12 16 15  8 10\n\n[[8]]\n [1] 16 12  9 12 12 15 14 13 16 11 27 14  8  9 26 12 14 10 13 18 13 22 17 10 14\n[26] 12 13 20 15 12 18 20 15  9 16 11 22 11 11 17\n\n[[9]]\n [1] 14 10 13  9 17 14 14 14 16 14 23 18  9 16 14 16 21 21 13 15 12 11 15 15 19\n[26] 16 12 13 14 14 13 17 10 19 14 13 13 21 15 13\n\n[[10]]\n [1] 12 18 10 10 17  7 13 14 17 12 27 13 11 17 11 15 17 16 12 20 17 18 15 19 20\n[26] 19  5 13 25 10 11 19 11 15 19 10 18 11 14 17\n\nattr(,\"class\")\n[1] \"monopoly\" \"list\"    \n\nsummary.monopoly(monopolyGame)\n\n  1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20 \n140 123 132 124 136 144 148 145 156 144 224 134 129 148 144 150 170 157 144 166 \n 21  22  23  24  25  26  27  28  29  30  31  32  33  34  35  36  37  38  39  40 \n159 146 167 126 149 147 135 151 156 133 134 153 141 145 156 124 142 155 120 152 \nattr(,\"class\")\n[1] \"monoSum\" \"numeric\"\n\nplot.monopoly(monopolyGame)\n\n\n\n\n\n\n\n\nParallel computing, through OpenMP, is also implemented as demonstrated here:\n\nmonoParallel &lt;- simulateMonopoly(numGames = 20, \n                                 maxTurns = 500, \n                                 sides    = 6, \n                                 numDice  = 2, \n                                 cores    = 3)\n\nsummary.monopoly(monoParallel)\n\n  1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20 \n246 288 302 271 298 286 294 267 281 296 474 268 252 321 272 283 273 299 307 306 \n 21  22  23  24  25  26  27  28  29  30  31  32  33  34  35  36  37  38  39  40 \n324 318 336 305 288 306 291 276 292 265 272 290 305 302 302 295 271 286 287 293 \nattr(,\"class\")\n[1] \"monoSum\" \"numeric\"\n\nplot.monopoly(monoParallel)"
+    "text": "The following document covers basic grammar, important phrases, and songs to help you learn some bassic Spanish."
+  },
+  {
+    "objectID": "presentations/spanish-class-nov2024.html#ar",
+    "href": "presentations/spanish-class-nov2024.html#ar",
+    "title": "Spanish Cheat Sheet",
+    "section": "-ar",
+    "text": "-ar\n\nConjugation of “-ar” verbs with “Hablar” (To speak)\n\n\nPronoun\nEnglish\nVerb\nExample\n\n\n\n\nYo\nI\n-o\nHablo\n\n\nTú\nYou (Informal)\n-as\nHablas\n\n\nÉl/Ella/Usted\nHe/She/You (Formal)\n-a\nHabla\n\n\nNosotros/-as\nWe\n-amos\nHablamos\n\n\nEllos/-as/Ustedes\nThey/Y’all\n-an\nHablan"
+  },
+  {
+    "objectID": "presentations/spanish-class-nov2024.html#er",
+    "href": "presentations/spanish-class-nov2024.html#er",
+    "title": "Spanish Cheat Sheet",
+    "section": "-er",
+    "text": "-er\n\nConjugation of “-er” verbs with “Aprender” (To learn)\n\n\nPronoun\nEnglish\nVerb\nExample\n\n\n\n\nYo\nI\n-o\nAprendo\n\n\nTú\nYou (Informal)\n-es\nAprendes\n\n\nÉl/Ella/Usted\nHe/She/You (Formal)\n-e\nAprende\n\n\nNosotros/-as\nWe\n-emos\nAprendemos\n\n\nEllos/-as/Ustedes\nThey/Y’all\n-en\nAprenden"
+  },
+  {
+    "objectID": "presentations/spanish-class-nov2024.html#ir",
+    "href": "presentations/spanish-class-nov2024.html#ir",
+    "title": "Spanish Cheat Sheet",
+    "section": "-ir",
+    "text": "-ir\n\nConjugation of “-ir” verbs with “Vivir” (To live)\n\n\nPronoun\nEnglish\nVerb\nExample\n\n\n\n\nYo\nI\n-o\nVivo\n\n\nTú\nYou (Informal)\n-es\nVives\n\n\nÉl/Ella/Usted\nHe/She/You (Formal)\n-e\nVive\n\n\nNosotros/-as\nWe\n-imos\nVivimos\n\n\nEllos/-as/Ustedes\nThey/Y’all\n-en\nViven"
+  },
+  {
+    "objectID": "presentations/spanish-class-nov2024.html#con-mi-burito-sabanero",
+    "href": "presentations/spanish-class-nov2024.html#con-mi-burito-sabanero",
+    "title": "Spanish Cheat Sheet",
+    "section": "Con mi burito sabanero",
+    "text": "Con mi burito sabanero\n\n\nRepeated three times\n\n\n\n\n\n\nSpanish\nEnglish\n\n\n\n\nCon mi burrito sabanero, voy camino de Belén\nWith my little donkey, I’m going to Bethlehem\n\n\nCon mi burrito sabanero, voy camino de Belén\n…\n\n\nSi me ven, si me ven\nIf you see me, if you see me\n\n\nVoy camino de Belén\nI’m going to Bethlehem\n\n\nSi me ven, si me ven\n…\n\n\nVoy camino de Belén\n…\n\n\nEl lucerito mañanero ilumina mi sendero\nThe morning light (star) illuminates my path\n\n\nEl lucerito mañanero ilumina mi sendero\n…\n\n\nSi me ven, si me ven\n…\n\n\nVoy camino de Belén\n…\n\n\nSi me ven, si me ven\n…\n\n\nVoy camino de Belén\n…\n\n\nCon mi cuatrico voy cantando, mi burrito va trotando\nWith my guitar, I sing while my little donkey trots\n\n\nCon mi cuatrico voy cantando, mi burrito va trotando\n..\n\n\nSi me ven, si me ven\n…\n\n\nVoy camino de Belén\n…\n\n\nSi me ven, si me ven\n…\n\n\nVoy camino de Belén\n…\n\n\nTuki tuki tuki tuki\nNo meaning, just fun to say\n\n\nTuki tuki tuki ta\n…\n\n\nApúrate, mi burrito\nHurry up, my little donkey\n\n\nQue ya vamos a llegar\nWe’re about to get there\n\n\nTuki tuki tuki tuki\n…\n\n\nTuki tuki tuki tu\n…\n\n\nApúrate mi burrito\nHurry up, my little donkey\n\n\nVamos a ver a Jesús\nWe are going to see Jesus"
+  },
+  {
+    "objectID": "presentations/spanish-class-nov2024.html#el-conejito-de-jesús",
+    "href": "presentations/spanish-class-nov2024.html#el-conejito-de-jesús",
+    "title": "Spanish Cheat Sheet",
+    "section": "El conejito de Jesús",
+    "text": "El conejito de Jesús\n\nJesús, Jesús, quiero contarte una cosa\n(A ver, ¿qué es?, dímelo, niña preciosa)\nTengo un conejito negro con su cola corta y sus ojos café\nDice mi tío Camilo, que lo halló jugando allá por el petén\nYa ves, Jesús, ¿acaso te descuidaste?\nDice mamá que los conejos son tuyos (aja)\nVieras cómo se divierte jugando conmigo allá por el jardín (qué bien)\nDime, Jesusito lindo, que me lo has prestado para ser feliz\nSí, yo te lo presté, para que juegues con él\nNo es conejo de peluche como algunos niños tienen por allí\nEste lo hice el otro día y te lo he mandado porque crees en mí\nJesús, Jesús, quiero contarte una cosa\n(A ver, ¿qué es?, dímelo, niña preciosa)\nTengo un conejito negro con su cola corta y sus ojos café\nDice mi tío Camilo, que lo halló jugando allá por el petén\n(A ver, cuéntame más)\nYa ves, Jesús, ¿acaso te descuidaste?\nDice mamá que los conejos son tuyos\nVieras cómo se divierte jugando conmigo allá por el jardín\nDime, Jesusito lindo, que me lo has prestado para ser feliz\nSí, yo te lo presté, para que juegues con él\nNo es conejo de peluche como algunos niños tienen por allí\nEste lo hice el otro día y te lo he mandado porque crees en mí\nSí, yo te lo presté, para que juegues con él\nNo es conejo de peluche como algunos niños tienen por allí\nEste lo hice el otro día y te lo he mandado porque crees en mí"
+  },
+  {
+    "objectID": "presentations/spanish-class-nov2024.html#la-macarena",
+    "href": "presentations/spanish-class-nov2024.html#la-macarena",
+    "title": "Spanish Cheat Sheet",
+    "section": "La macarena",
+    "text": "La macarena\n\nMostly English\n\n\n\nSpanish (OG)\n\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nMacarena tiene un novio que se llama\nQue se llama de apellido Vitorino\nY en la jura de bandera del muchacho\nSe la dio con dos amigos, ay\nMacarena tiene un novio que se llama\nQue se llama de apellido Vitorino\nY en la jura de bandera del muchacho\nSe la dio con dos amigos, ay\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nMacarena, Macarena, Macarena\nQue te gustan los veranos de Marbella\nMacarena, Macarena, Macarena\nQue te gusta la movida guerrillera, ay\nAy\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nMacarena sueña con el corte inglés\nY se compra los modelos más modernos\nLe gustaría vivir en Nueva York\nY ligar un novio nuevo, ay\nMacarena sueña con el corte inglés\nY se compra los modelos más modernos\nLe gustaría vivir en Nueva York\nY ligar un novio nuevo, ay\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nMacarena tiene un novio que se llama\nQue se llama de apellido Vitorino\nY en la jura de bandera del muchacho\nSe la dio con dos amigos, ay\nMacarena tiene un novio que se llama\nQue se llama de apellido Vitorino\nY en la jura de bandera del muchacho\nSe la dio con dos amigos, ay\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nAy\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena"
   },
   {
     "objectID": "main_projects.html",
     "href": "main_projects.html",
     "title": "Projects",
     "section": "",
-    "text": "A current list past and current projects.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\npartyGames\n\n\nA Simulation Package in R\n\n\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome",
-    "section": "",
-    "text": "Welcome to my website! Here you will find previous projects, current projects I can share, contact information, and more!\nIf there are any questions, comments, or concerns, please feel free to contact me.\nThe following is currently available:\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nTitle\n\n\n\n\n\n\nKline DuBose\n\n\n\n\nProjects\n\n\n\n\nSpanish Classes\n\n\n\n\n\nNo matching items"
+    "text": "A list of some of my past and current projects.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\npartyGames\n\n\nA Simulation Package in R\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "main_about.html",
@@ -42,59 +77,31 @@
     "text": "Experience\nUniversity of Utah, DELPHI | T.A. for R Coding Bootcamp | June 2023 - Present\nUniversity of Utah | Graduate Research Assistant | Aug 2022 - Present\nUtah State University | Recitation Leader, Grader | Aug 2020 - May 2022"
   },
   {
-    "objectID": "main_spanish.html",
-    "href": "main_spanish.html",
-    "title": "Spanish Classes",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome",
     "section": "",
-    "text": "Notes used when teaching Spanish classes.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSpanish Cheat Sheet\n\n\n\n\n\n\nKline DuBose\n\n\nJan 31, 2025\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Welcome to my website! Here you will find previous projects, current projects I can share, contact information, and more!\nIf there are any questions, comments, or concerns, please feel free to contact me.\nThe following is currently available:\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nTitle\n\n\n\n\n\n\nKline DuBose\n\n\n\n\nPresentations\n\n\n\n\nProjects\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "spanish/spanish-class-nov2024.html",
-    "href": "spanish/spanish-class-nov2024.html",
-    "title": "Spanish Cheat Sheet",
+    "objectID": "main_presentation.html",
+    "href": "main_presentation.html",
+    "title": "Presentations",
     "section": "",
-    "text": "The following document covers basic grammar, important phrases, and songs to help you learn some bassic Spanish."
+    "text": "Notes and presentations done for different groups. Some of these projects are unrelated to my research interests, but are helpful to different groups I have talked to.\n\n\n\n\n\n\n\n\n\n\n\n\nMake a Quarto Website\n\n\n\n\n\n\nKline DuBose\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSpanish Cheat Sheet\n\n\n\n\n\n\nKline DuBose\n\n\nFeb 27, 2025\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "spanish/spanish-class-nov2024.html#ar",
-    "href": "spanish/spanish-class-nov2024.html#ar",
-    "title": "Spanish Cheat Sheet",
-    "section": "-ar",
-    "text": "-ar\n\nConjugation of “-ar” verbs with “Hablar” (To speak)\n\n\nPronoun\nEnglish\nVerb\nExample\n\n\n\n\nYo\nI\n-o\nHablo\n\n\nTú\nYou (Informal)\n-as\nHablas\n\n\nÉl/Ella/Usted\nHe/She/You (Formal)\n-a\nHabla\n\n\nNosotros/-as\nWe\n-amos\nHablamos\n\n\nEllos/-as/Ustedes\nThey/Y’all\n-an\nHablan"
+    "objectID": "presentations/quarto-website-construction.html#this-is-a-test",
+    "href": "presentations/quarto-website-construction.html#this-is-a-test",
+    "title": "Make a Quarto Website",
+    "section": "This is a test",
+    "text": "This is a test\nI’m trying to figure out if I can make a website and have a reveal presentation as a page on it."
   },
   {
-    "objectID": "spanish/spanish-class-nov2024.html#er",
-    "href": "spanish/spanish-class-nov2024.html#er",
-    "title": "Spanish Cheat Sheet",
-    "section": "-er",
-    "text": "-er\n\nConjugation of “-er” verbs with “Aprender” (To learn)\n\n\nPronoun\nEnglish\nVerb\nExample\n\n\n\n\nYo\nI\n-o\nAprendo\n\n\nTú\nYou (Informal)\n-es\nAprendes\n\n\nÉl/Ella/Usted\nHe/She/You (Formal)\n-e\nAprende\n\n\nNosotros/-as\nWe\n-emos\nAprendemos\n\n\nEllos/-as/Ustedes\nThey/Y’all\n-en\nAprenden"
-  },
-  {
-    "objectID": "spanish/spanish-class-nov2024.html#ir",
-    "href": "spanish/spanish-class-nov2024.html#ir",
-    "title": "Spanish Cheat Sheet",
-    "section": "-ir",
-    "text": "-ir\n\nConjugation of “-ir” verbs with “Vivir” (To live)\n\n\nPronoun\nEnglish\nVerb\nExample\n\n\n\n\nYo\nI\n-o\nVivo\n\n\nTú\nYou (Informal)\n-es\nVives\n\n\nÉl/Ella/Usted\nHe/She/You (Formal)\n-e\nVive\n\n\nNosotros/-as\nWe\n-imos\nVivimos\n\n\nEllos/-as/Ustedes\nThey/Y’all\n-en\nViven"
-  },
-  {
-    "objectID": "spanish/spanish-class-nov2024.html#con-mi-burito-sabanero",
-    "href": "spanish/spanish-class-nov2024.html#con-mi-burito-sabanero",
-    "title": "Spanish Cheat Sheet",
-    "section": "Con mi burito sabanero",
-    "text": "Con mi burito sabanero\n\n\nRepeated three times\n\n\n\n\n\n\nSpanish\nEnglish\n\n\n\n\nCon mi burrito sabanero, voy camino de Belén\nWith my little donkey, I’m going to Bethlehem\n\n\nCon mi burrito sabanero, voy camino de Belén\n…\n\n\nSi me ven, si me ven\nIf you see me, if you see me\n\n\nVoy camino de Belén\nI’m going to Bethlehem\n\n\nSi me ven, si me ven\n…\n\n\nVoy camino de Belén\n…\n\n\nEl lucerito mañanero ilumina mi sendero\nThe morning light (star) illuminates my path\n\n\nEl lucerito mañanero ilumina mi sendero\n…\n\n\nSi me ven, si me ven\n…\n\n\nVoy camino de Belén\n…\n\n\nSi me ven, si me ven\n…\n\n\nVoy camino de Belén\n…\n\n\nCon mi cuatrico voy cantando, mi burrito va trotando\nWith my guitar, I sing while my little donkey trots\n\n\nCon mi cuatrico voy cantando, mi burrito va trotando\n..\n\n\nSi me ven, si me ven\n…\n\n\nVoy camino de Belén\n…\n\n\nSi me ven, si me ven\n…\n\n\nVoy camino de Belén\n…\n\n\nTuki tuki tuki tuki\nNo meaning, just fun to say\n\n\nTuki tuki tuki ta\n…\n\n\nApúrate, mi burrito\nHurry up, my little donkey\n\n\nQue ya vamos a llegar\nWe’re about to get there\n\n\nTuki tuki tuki tuki\n…\n\n\nTuki tuki tuki tu\n…\n\n\nApúrate mi burrito\nHurry up, my little donkey\n\n\nVamos a ver a Jesús\nWe are going to see Jesus"
-  },
-  {
-    "objectID": "spanish/spanish-class-nov2024.html#el-conejito-de-jesús",
-    "href": "spanish/spanish-class-nov2024.html#el-conejito-de-jesús",
-    "title": "Spanish Cheat Sheet",
-    "section": "El conejito de Jesús",
-    "text": "El conejito de Jesús\n\nJesús, Jesús, quiero contarte una cosa\n(A ver, ¿qué es?, dímelo, niña preciosa)\nTengo un conejito negro con su cola corta y sus ojos café\nDice mi tío Camilo, que lo halló jugando allá por el petén\nYa ves, Jesús, ¿acaso te descuidaste?\nDice mamá que los conejos son tuyos (aja)\nVieras cómo se divierte jugando conmigo allá por el jardín (qué bien)\nDime, Jesusito lindo, que me lo has prestado para ser feliz\nSí, yo te lo presté, para que juegues con él\nNo es conejo de peluche como algunos niños tienen por allí\nEste lo hice el otro día y te lo he mandado porque crees en mí\nJesús, Jesús, quiero contarte una cosa\n(A ver, ¿qué es?, dímelo, niña preciosa)\nTengo un conejito negro con su cola corta y sus ojos café\nDice mi tío Camilo, que lo halló jugando allá por el petén\n(A ver, cuéntame más)\nYa ves, Jesús, ¿acaso te descuidaste?\nDice mamá que los conejos son tuyos\nVieras cómo se divierte jugando conmigo allá por el jardín\nDime, Jesusito lindo, que me lo has prestado para ser feliz\nSí, yo te lo presté, para que juegues con él\nNo es conejo de peluche como algunos niños tienen por allí\nEste lo hice el otro día y te lo he mandado porque crees en mí\nSí, yo te lo presté, para que juegues con él\nNo es conejo de peluche como algunos niños tienen por allí\nEste lo hice el otro día y te lo he mandado porque crees en mí"
-  },
-  {
-    "objectID": "spanish/spanish-class-nov2024.html#la-macarena",
-    "href": "spanish/spanish-class-nov2024.html#la-macarena",
-    "title": "Spanish Cheat Sheet",
-    "section": "La macarena",
-    "text": "La macarena\n\nMostly English\n\n\n\nSpanish (OG)\n\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nMacarena tiene un novio que se llama\nQue se llama de apellido Vitorino\nY en la jura de bandera del muchacho\nSe la dio con dos amigos, ay\nMacarena tiene un novio que se llama\nQue se llama de apellido Vitorino\nY en la jura de bandera del muchacho\nSe la dio con dos amigos, ay\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nMacarena, Macarena, Macarena\nQue te gustan los veranos de Marbella\nMacarena, Macarena, Macarena\nQue te gusta la movida guerrillera, ay\nAy\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nMacarena sueña con el corte inglés\nY se compra los modelos más modernos\nLe gustaría vivir en Nueva York\nY ligar un novio nuevo, ay\nMacarena sueña con el corte inglés\nY se compra los modelos más modernos\nLe gustaría vivir en Nueva York\nY ligar un novio nuevo, ay\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nMacarena tiene un novio que se llama\nQue se llama de apellido Vitorino\nY en la jura de bandera del muchacho\nSe la dio con dos amigos, ay\nMacarena tiene un novio que se llama\nQue se llama de apellido Vitorino\nY en la jura de bandera del muchacho\nSe la dio con dos amigos, ay\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nAy\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena\nDale a tu cuerpo alegría, Macarena\nHey Macarena, ay\nDale a tu cuerpo alegría Macarena\nQue tu cuerpo es pa’ darle alegría y cosa buena"
+    "objectID": "projects/partyGames.html",
+    "href": "projects/partyGames.html",
+    "title": "partyGames",
+    "section": "",
+    "text": "partyGames\nThe partyGames package was written to simulate different games under a variaty of condidtions.\nCurrently, the package simulates:\n\nWhite Elephant Gift Exchanges\nMonopoly\n\nFurther information about the package, including installation instructions, can be found here.\nBrief information about functionality follows.\n\n\nWhite Elephant Games\nThe following shows how to simulate a white elephant gift game utalizing a 6-sided die and a fair coin.\n\nlibrary(partyGames)\ngames &lt;- simulateElephant(15, dice = TRUE, coins = 1, iter = 1500, pheads = 0.5, sides = 6, numDice = 1)\nsummary.partyGames(games)\n\n$winner\nwinner\n  1   2   3   4   5   6   7   8   9  10  11  12  13  14  15 \n 79 113  77 102 109 112 116  90 104 110  90 100 101 107  90 \n\n$moves\nmoves\n  -6   -5   -4   -3   -2   -1    1    2    3    4    5    6 \n1928 1885 1857 1809 1882 1845 1911 1803 1933 1980 1821 1846 \n\nattr(,\"class\")\n[1] \"elphSum\" \"list\"   \n\nclass(games)\n\n[1] \"elphList\" \"list\"    \n\nplot.partyGames(games)\n\n\n\n\n\n\n\nplot.partyGames(summary.partyGames(games))\n\n\n\nMonopoly Simulation\nAdditionally, you can simulate Monopoly games based on the 2008 US version of the game.\n\nlibrary(partyGames)\nmonopolyGame &lt;- simulateMonopoly()\nmonopolyGame\n\n[[1]]\n [1] 12 14 14 14 13 13 10 17 15 11 25 18  9 18 14 13 16 15 10 18 19 17 14  9 19\n[26] 17 12 11 12 17 19 14 15 15 15 11 11 12 18 12\n\n[[2]]\n [1] 12 14 13 17 15 15  9 19  9 17 24 14  9 20 15 11 14 14 13 18 21 12 16 12 15\n[26] 16 13 19 10 16 13 18  9 17 12 10 21 18 12  9\n\n[[3]]\n [1] 11 15 11 13 13 19 13 19 12 16 23 14  9 16 13 16 13 18 20  9 11 17 18 12 21\n[26] 10 13 15 16 10 14 15 19  8 18 14 18 10 16 14\n\n[[4]]\n [1] 13 12 16 10 17 13 16 18 14 16 18 18  8 10 19  9 16 19 19 10 12 21 12 18 12\n[26] 22 15 18 12 13 10 16 15 16 16 16 14 15 12 12\n\n[[5]]\n [1] 13 21 18 13 12 15 14 16 15 15 19 21 11 13 12 25 13 18 18 17  8 19 19 15  6\n[26] 22 16 17 13 17  9 10 10 18 20 19 14  9 13 11\n\n[[6]]\n [1] 15 15 13 17 15 11 11 18 17 15 24  4 17 20 13  8 19  9 21 18 13 15 15 20 16\n[26] 12 12 14 19  8 15 15 11 20 15 13 14 15 14 17\n\n[[7]]\n [1] 14 10 10 20 19  9 11 12  9 22 24 10 16 18 14 13 15 12 21 11 20 10 14 14 18\n[26] 14 22 15 13 10 13 11 14 18 11 19 17 10 17 16\n\n[[8]]\n [1]  9 17 15 13 21 13 11  9 17 16 19 17 11 18 18 15 12 20 13 15 14 16 18 13 18\n[26] 17 21  6 16  8 16 20 13 12 20 18 13 10 13 16\n\n[[9]]\n [1] 12 13 11 11 20 10 10 20 15 13 22 18 13 14 15 20  9 17 13  8 27 16 15 18  8\n[26] 17 14 15 13 14 20 12 15 18 11 12 18 16  9 19\n\n[[10]]\n [1]  8 14 20 17 10 14 16 15 17 13 21 13 16 15 15 12 14 20 16 12  8 17 26 12 16\n[26] 20 12 16 11 12 14 13 20 15 13 10 12 18  9 19\n\nattr(,\"class\")\n[1] \"monopoly\" \"list\"    \n\nsummary.monopoly(monopolyGame)\n\n  1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20 \n119 145 141 145 155 132 121 163 140 154 219 147 119 162 148 142 141 162 164 136 \n 21  22  23  24  25  26  27  28  29  30  31  32  33  34  35  36  37  38  39  40 \n153 160 167 143 149 167 150 146 135 125 143 144 141 157 151 142 152 133 133 145 \nattr(,\"class\")\n[1] \"monoSum\" \"numeric\"\n\nplot.monopoly(monopolyGame)\n\n\n\n\n\n\n\n\nParallel computing, through OpenMP, is also implemented as demonstrated here:\n\nmonoParallel &lt;- simulateMonopoly(numGames = 20, \n                                 maxTurns = 500, \n                                 sides    = 6, \n                                 numDice  = 2, \n                                 cores    = 3)\n\nsummary.monopoly(monoParallel)\n\n  1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20 \n271 281 282 271 318 274 263 289 267 268 456 276 318 273 287 280 298 304 293 317 \n 21  22  23  24  25  26  27  28  29  30  31  32  33  34  35  36  37  38  39  40 \n308 318 314 311 299 272 308 320 270 273 287 300 279 269 304 317 322 290 247 272 \nattr(,\"class\")\n[1] \"monoSum\" \"numeric\"\n\nplot.monopoly(monoParallel)"
   }
 ]

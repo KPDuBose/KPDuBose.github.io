@@ -9,14 +9,15 @@
     "listing": "/index.html",
     "items": [
       "/main_about.html",
-      "/main_projects.html",
-      "/main_spanish.html"
+      "/main_presentation.html",
+      "/main_projects.html"
     ]
   },
   {
-    "listing": "/main_spanish.html",
+    "listing": "/main_presentation.html",
     "items": [
-      "/spanish/spanish-class-nov2024.html"
+      "/presentations/quarto-website-construction.html",
+      "/presentations/spanish-class-nov2024.html"
     ]
   }
 ]
