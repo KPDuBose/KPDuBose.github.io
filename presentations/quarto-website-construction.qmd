@@ -1,12 +1,14 @@
 ---
 title: "How to Make a Quarto Website"
 author: Kline DuBose
+image: website_construction.png
 date: last-modified
 format:
   html: 
-    code-fold: true
     embed-resources: true
-    theme: cosmo
+    toc: true
+    toc-location: left
+    theme: simplex
 execute: 
   warning: false
   echo: true
@@ -15,8 +17,149 @@ editor_options:
   chunk_output_type: console
 ---
 
-# Making a Quarto Website
+First, due credit where credit is due. The following document was heavily influenced by tutorials found on the [Quarto website](https://quarto.org/docs/websites/).
 
-## This is a test
+# Pre-Game
 
-I'm trying to figure out if I can make a website and have a reveal presentation as a page on it. 
+First, I recommend making sure you have a current version of [R](https://cran.rstudio.com/), [RStudio](https://posit.co/download/rstudio-desktop/), and [Quarto](https://quarto.org/docs/get-started/). 
+
+Quarto and RStudio have been created by Posit. Quarto is essentially an updated version of RMarkdown files that have some different capabilites than it's predecessor. I would highly recommend looking ito it. Posit has mad numerous [tutorials](https://quarto.org/docs/get-started/hello/rstudio.html) about the framework. It's pretty cool. 
+
+# Getting Started
+
+## Create a New Project
+
+Starting to create a webiste is pretty easy. You simple have to create a new project in RStudio. 
+
+1. Click on the new project button in the top left of the RStudio IDE. 
+2. Select new project
+3. Select the "Quarto Website" option
+
+![New Project Wizard](website_construction_images/quarto_website_wizard.png)
+
+4. Create a new name for the directory. I host my website on GitHub Pages and follow the naming convention for that (i.e. kpdubose-website which is related to [kpdubose.github.io](kpdubose.github.io))
+
+![Name the Project](website_construction_images/quarto_website_wizard2.png)
+
+5. Then click create project. This will create a new project with four files: _quarto.yml, about.qmd, index.qmd, and styles.css.
+
+![The New Project](website_construction_images/quarto_new_website.png)
+
+## What are thoose?! (They're my new files)
+
+Let's dive briefly into the new files you can see. 
+
+**quarto.yml**
+
+![_quarto.yml](website_construction_images/quarto_yml.png)
+
+This file is like the yml header that is on most .qmd files. But, this applies to the whole website. It sets the default theme for the whole website by setting headers and footnotes, and references the styles.css, which I will go into a little later. 
+
+You can change the theme from page to page (kind of like I did with this page on my website) by specifying a different theme on the individual pages. 
+
+**about.qmd**
+
+![about.qmd](website_construction_images/about_qmd.png)
+
+This is one of the pages on the website. Pretty basic. 
+
+**index.qmd**
+
+![index.qmd](website_construction_images/index_qmd.png)
+
+This is the home page. I don't know what else to say here.
+
+**styles.css**
+
+![styles.css](website_construction_images/styles_css.png)
+
+This is the styles.css page. You can use it to edit the website theme by specifying specific colors, specific fonts, background colors, etc... I edit this as needed, but most of the [Quarto website themes](https://quarto.org/docs/output-formats/html-themes.html). If you have questions about what a specific theme looks like, they can all be found [here](https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss).
+
+## Let's check it out
+
+There are two important terminal commands to know. 
+
+The first is `quarto preview`. This is the general, let's make sure everything is linked properly and working the way I was hoping it would. 
+
+![quarto preview](website_construction_images/terminal_quarto_preview.png)
+
+The second command is `quarto render`. This command builds the website. It should be run before you upload the files to the cloud, or if you make any big changes to the themes of the website. 
+
+When you run the `quarto preview` command it should look something like this (assuming you haven't made any changes). 
+
+![Home Page](website_construction_images/example_website_home.png)
+
+![About Page](website_construction_images/example_website_about.png)
+
+But yeah. That's the basics. You can play around with it. The next few sections cover my ramblings and different work arounds that I have found for problems that I have had. These can all be found by searching the internet, but I thought it might be helpful to keep some here. 
+
+# Additional Thoughts and Examples
+
+## Different Quarto Formats
+
+I've started to experiment with a few different formats for pages. The following formats either play nice or they don't. Specifically, I couldn't upload the rendered website to GitHub even though `quarto preview` gave me all kinds of false hope. 
+
+Renders with no trouble:
+
+- html
+- pdf
+
+Hurts me time and time again:
+
+- revealjs
+
+## Hosting on GitHub pages
+
+### The docs folder
+
+If you plan to host on GitHub pages, there are a few tips.
+
+In the _quarto.yml file, include the following:
+
+```
+#| code-copy: true
+---
+project:
+  type: website
+  output-dir: docs
+---
+```
+
+
+I push my entire project including all of my .qmd files and images I used in making my website. When you `quarto render` it creates a few different files, including an important one called "docs".
+
+![Folders](website_construction_images/folders_after_render.png)
+
+This is the full webiste in a folder. When you push to GitHub, there is an option to build from a specific branch and folder. Make sure you are building from the docs folder. 
+
+![Pages](website_construction_images/github_docs.png)
+
+### .nojekyll file
+
+If you're hosting on GitHub, you need to include a .nojekyll file. 
+
+You can include one by running the following line of cod in the command terminal
+
+For Windows:
+
+```
+copy NUL .nojekyll
+```
+
+For Mac/Linux:
+
+```
+touch .nojekyll
+```
+
+### The final push
+
+In the command terminal, the following lines of code can be run to push to GitHub. This is after you've linked the depository to you project. 
+
+```
+quarto render
+git add docs
+git commit -m "Publish site to docs/"
+git push
+```
+
