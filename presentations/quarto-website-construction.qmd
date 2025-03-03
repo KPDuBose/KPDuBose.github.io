@@ -163,3 +163,110 @@ git commit -m "Publish site to docs/"
 git push
 ```
 
+## How to structure a _quarto.yml
+
+Below is the code I have used for my [_quarto.yml](https://github.com/KPDuBose/KPDuBose.github.io/blob/master/_quarto.yml). This has a brief explanation of each code chunk and what it does for the website. 
+
+This section defines the project type, and the output-directory. Since I host my website on GitHub, I have my output-directory set as docs, as explained above. The render option let's you select which documents you would like to render to the website. "*.qmd" tells Quarto to render all .qmd files. "!tournament-announcements/" and "!resumes/" tells Quarto to not render any files found in this directory
+
+```
+project:
+  type: website
+  output-dir: docs
+  render:
+    - "*.qmd"
+    - "!tournament-announcements/"
+    - "!resumes/"
+```
+
+The next two section deal with the look of the website. This specific section defines the title of the website as "Kline DuBose" (fitting for a portfolio website) and then establishes the navbar at the top of the page. It sets it to the left and makes then links to pages I have made and set in the navbar. There are a lot of options for this, but googling website options makes it easy for you to look into it.
+
+```
+website:
+  title: "Kline DuBose"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: main_about.qmd
+        text: About
+      - href: main_projects.qmd
+        text: Projects
+```
+
+This section sets up the footer for the entire website. Mine includes links with specific icons and different websites. As well as the address of my institution. 
+
+```
+  page-footer:
+    background: light
+    left:
+      - icon: twitter-x
+        href: https://x.com/KlineDuBose
+      - icon: github
+        href: https://github.com/KPDuBose
+      - icon: linkedin
+        href: https://www.linkedin.com/in/kline-dubose/
+      - icon: envelope
+        href: mailto:kline.dubose@utah.edu
+    right:
+      - "295 Chipeta Way, 3rd Floor
+         Salt Lake City, UT 84108
+         United States"
+```
+
+This last section sets additional format information for the website. 
+
+```
+format:
+  html:
+    theme: 
+      - morph
+      - custom.scss
+    css: styles.css
+    toc: true
+```
+
+## Resume
+
+You should be able to include your resume or CV on the website without too much trouble. I have a quarto document that I use to make sure it renders nicely and that I don't make any mistakes with my poor Microsoft Word skills. Just make sure that you include a "*.docx" or 
+a "*.pdf" option in the render section of your _quarto.yml file. I haven't played around with it a ton. 
+
+If you would like to see the files I've used to construct my CV, they can be found on my [GitHub](https://github.com/KPDuBose/KPDuBose.github.io/tree/master). 
+
+## That's it, for now
+
+That should be enough information to help you get started. Quarto is a versatile tool, and they have a lot of tutorials to help one get profecient at using it. 
+
+Feel free to check out my [GitHub project](https://github.com/KPDuBose/KPDuBose.github.io/tree/master) and let me know if you have any question. 
+
+Good luck out there!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,6 +1,7 @@
 ---
 title: "partyGames"
 subtitle: "A Simulation Package in R"
+date: last-updated
 author: "Kline DuBose"
 image: Board_Game_Dice_Roll.png
 ---
