@@ -1,14 +1,14 @@
 ---
 title: "partyGames"
 subtitle: "A Simulation Package in R"
-date: last-updated
+date: last-modified
 author: "Kline DuBose"
 image: Board_Game_Dice_Roll.png
 ---
 
 # partyGames
 
-The partyGames package was written to simulate different games under a variaty of condidtions. 
+The partyGames package was written to simulate different games under a variety of conditions. 
 
 Currently, the package simulates:
 
