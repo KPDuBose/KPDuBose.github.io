@@ -19,7 +19,7 @@ editor_options:
 
 First, due credit where credit is due. The following document was heavily influenced by tutorials found on the [Quarto website](https://quarto.org/docs/websites/).
 
-# Pre-Game
+# Prep Work
 
 First, I recommend making sure you have a current version of [R](https://cran.rstudio.com/), [RStudio](https://posit.co/download/rstudio-desktop/), and [Quarto](https://quarto.org/docs/get-started/). 
 
@@ -45,7 +45,7 @@ Starting to create a webiste is pretty easy. You simple have to create a new pro
 
 ![The New Project](website_construction_images/quarto_new_website.png)
 
-## What are thoose?! (They're my new files)
+## The New Files
 
 Let's dive briefly into the new files you can see. 
 
@@ -53,21 +53,21 @@ Let's dive briefly into the new files you can see.
 
 ![_quarto.yml](website_construction_images/quarto_yml.png)
 
-This file is like the yml header that is on most .qmd files. But, this applies to the whole website. It sets the default theme for the whole website by setting headers and footnotes, and references the styles.css, which I will go into a little later. 
+This file is like the yml header that for most .qmd files, but this affects to the whole website. It sets the default theme, default styles, title, navbar, etc... There are a lot of features that can be played with here, [that we can dive into later](https://github.com/KPDuBose/KPDuBose.github.io/blob/master/_quarto.yml), or can be looked up on the Quarto website. 
 
-You can change the theme from page to page (kind of like I did with this page on my website) by specifying a different theme on the individual pages. 
+You can change the theme from page to page (kind of like I did with this page on my website) by specifying a different theme on the individual pages. (Though this is a newer feature. Older versions of Quarto will not allow the themes to differ from page to page.)
 
 **about.qmd**
 
 ![about.qmd](website_construction_images/about_qmd.png)
 
-This is one of the pages on the website. Pretty basic. 
+This is one of the pages on the website. If you're using this as a portfolio website, this can be the page about you! For the example code of how I set up my "About" page, please look at my [Github file](https://github.com/KPDuBose/KPDuBose.github.io/blob/master/main_about.qmd).
 
 **index.qmd**
 
 ![index.qmd](website_construction_images/index_qmd.png)
 
-This is the home page. I don't know what else to say here.
+This is the home page for the website. As with the about page, additional information can be added and changed. I have the home page set up to show a list of links to different projects and other pages on the website. Some of these are not accessible via the navbar so it can be pretty helpful. You can even just use this page as your about you page. For an example of you I set up my index page, please [click here](https://github.com/KPDuBose/KPDuBose.github.io/blob/master/index.qmd).
 
 **styles.css**
 
@@ -75,9 +75,11 @@ This is the home page. I don't know what else to say here.
 
 This is the styles.css page. You can use it to edit the website theme by specifying specific colors, specific fonts, background colors, etc... I edit this as needed, but most of the [Quarto website themes](https://quarto.org/docs/output-formats/html-themes.html). If you have questions about what a specific theme looks like, they can all be found [here](https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss).
 
+I copied my theme from the `morph` theme, but then made some changes to the styles.css associated with it. For an example of this theme, please look [here](https://github.com/KPDuBose/KPDuBose.github.io/blob/master/custom.scss).
+
 ## Let's check it out
 
-There are two important terminal commands to know. 
+There are two important terminal commands to know when constructing your website.
 
 The first is `quarto preview`. This is the general, let's make sure everything is linked properly and working the way I was hoping it would. 
 
@@ -97,14 +99,14 @@ But yeah. That's the basics. You can play around with it. The next few sections 
 
 ## Different Quarto Formats
 
-I've started to experiment with a few different formats for pages. The following formats either play nice or they don't. Specifically, I couldn't upload the rendered website to GitHub even though `quarto preview` gave me all kinds of false hope. 
+I've started to experiment with a few different formats for pages. I'm planning to keep a running list of formats I've gotten to integrate with the GitHub pages website properly and other tips and tricks for them. 
 
-Renders with no trouble:
+Renders from a .qmd with no trouble:
 
 - html
 - pdf
 
-Hurts me time and time again:
+Everything tells me it should work, but it hasn't yet:
 
 - revealjs
 
@@ -126,11 +128,11 @@ project:
 ```
 
 
-I push my entire project including all of my .qmd files and images I used in making my website. When you `quarto render` it creates a few different files, including an important one called "docs".
+I push my entire project including all of my .qmd files and images I used in making my website, mainly for easy reference in this page of my website. When you `quarto render` it creates a few different files, including the "docs" directory if you have included the `output-dir: docs` option. 
 
 ![Folders](website_construction_images/folders_after_render.png)
 
-This is the full webiste in a folder. When you push to GitHub, there is an option to build from a specific branch and folder. Make sure you are building from the docs folder. 
+The "docs" folder contains the fully built website. When you push to GitHub, there is an option to build from a specific branch and folder. Make sure you are building from the docs folder. 
 
 ![Pages](website_construction_images/github_docs.png)
 
@@ -162,6 +164,8 @@ git add docs
 git commit -m "Publish site to docs/"
 git push
 ```
+
+Additionally, you can just render the website and upload the docs folder to the pages website. 
 
 ## How to structure a _quarto.yml
 
@@ -232,6 +236,16 @@ You should be able to include your resume or CV on the website without too much 
 a "*.pdf" option in the render section of your _quarto.yml file. I haven't played around with it a ton. 
 
 If you would like to see the files I've used to construct my CV, they can be found on my [GitHub](https://github.com/KPDuBose/KPDuBose.github.io/tree/master). 
+
+## Icons
+
+Finding the icons associated with the quarto projects. They can be found on the [Quarto website](https://quarto.org/docs/reference/projects/websites.html) under the **Nav Options** section, but that just redirects you to the [Bootstrap icons website](https://icons.getbootstrap.com/). Quarto uses the bootstrap framework, I think. I haven't really delved into it, so don't take my word for it. 
+
+## 404
+
+You can also include an error page. Unless you're doing something really fancy, you can just include a 404.qmd file. My [404.qmd](https://github.com/KPDuBose/KPDuBose.github.io/blob/master/404.qmd) is pretty basic, but it fits well with my theme. Here's what it looks like when you find [it](https://kpdubose.github.io/tournament-announcements/dubose-open2025.html).
+
+If you're doing something fancier, check out the [website navigation tutorial](https://quarto.org/docs/websites/website-navigation.html#pages-404)
 
 ## That's it, for now
 
