@@ -49,7 +49,7 @@ Starting to create a webiste is pretty easy. You simple have to create a new pro
 
 Let's dive briefly into the new files you can see. 
 
-**quarto.yml**
+### quarto.yml
 
 ![_quarto.yml](website_construction_images/quarto_yml.png)
 
@@ -57,25 +57,31 @@ This file is like the yml header that for most .qmd files, but this affects to t
 
 You can change the theme from page to page (kind of like I did with this page on my website) by specifying a different theme on the individual pages. (Though this is a newer feature. Older versions of Quarto will not allow the themes to differ from page to page.)
 
-**about.qmd**
+### about.qmd
 
 ![about.qmd](website_construction_images/about_qmd.png)
 
 This is one of the pages on the website. If you're using this as a portfolio website, this can be the page about you! For the example code of how I set up my "About" page, please look at my [Github file](https://github.com/KPDuBose/KPDuBose.github.io/blob/master/main_about.qmd).
 
-**index.qmd**
+### index.qmd
 
 ![index.qmd](website_construction_images/index_qmd.png)
 
 This is the home page for the website. As with the about page, additional information can be added and changed. I have the home page set up to show a list of links to different projects and other pages on the website. Some of these are not accessible via the navbar so it can be pretty helpful. You can even just use this page as your about you page. For an example of you I set up my index page, please [click here](https://github.com/KPDuBose/KPDuBose.github.io/blob/master/index.qmd).
 
-**styles.css**
+### styles.css
 
 ![styles.css](website_construction_images/styles_css.png)
 
-This is the styles.css page. You can use it to edit the website theme by specifying specific colors, specific fonts, background colors, etc... I edit this as needed, but most of the [Quarto website themes](https://quarto.org/docs/output-formats/html-themes.html). If you have questions about what a specific theme looks like, they can all be found [here](https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss).
+This is the styles.css page. You can assign html objects for the website here.
 
-I copied my theme from the `morph` theme, but then made some changes to the styles.css associated with it. For an example of this theme, please look [here](https://github.com/KPDuBose/KPDuBose.github.io/blob/master/custom.scss).
+### Not made, but maybe helpful, a .scss file
+
+This file isn't generated automatically, but it can be helpful to have for changing the theme of your website. 
+
+You can use it to edit the website theme by specifying specific colors, specific fonts, background colors, etc... I edit this as needed, but most of the [Quarto website themes](https://quarto.org/docs/output-formats/html-themes.html). If you have questions about what a specific theme looks like, they can all be found [here](https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss).
+
+I copied my theme from the `morph` theme, but then made some changes to the custom.scss associated with it. For an example of this theme, please look [here](https://github.com/KPDuBose/KPDuBose.github.io/blob/master/custom.scss).
 
 ## Let's check it out
 
