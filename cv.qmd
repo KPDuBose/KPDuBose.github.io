@@ -114,6 +114,20 @@ tibble::tribble(
     cvevents(when = "dates", what = "role", where = "institution", details = "tasks")
 ```
 
+# Additional Experience
+
+```{r}
+#| label: additional
+#| output: asis
+
+tibble::tribble(
+  ~role, ~institution, ~dates, ~details, ~tasks,
+  "Judge at Student Reserach Conference", "Brigham Young University", "Mar. 2025", "Student research conference at BYU", c("Provided feedback on student reserach projects in the machine learning space.", "Selected session winners")
+) |>
+    cvevents(when = "dates", what = "role", where = "institution", details = "tasks")
+```
+
+
 # Technical Skills
 
 ```{r}
@@ -146,5 +160,5 @@ tibble::tribble(
 
 # References
 
-Avaliable upon request
+Available upon request
 
