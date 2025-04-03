@@ -75,13 +75,17 @@ This is the home page for the website. As with the about page, additional inform
 
 This is the styles.css page. You can assign html objects for the website here.
 
-### Not made, but maybe helpful, a .scss file
+## An Additional File
+
+### Add an .scss file
 
 This file isn't generated automatically, but it can be helpful to have for changing the theme of your website. 
 
+I like to call this file "custom.scss". You can create this in RStudio by adding a new file and just calling it that. 
+
 You can use it to edit the website theme by specifying specific colors, specific fonts, background colors, etc... I edit this as needed, but most of the [Quarto website themes](https://quarto.org/docs/output-formats/html-themes.html). If you have questions about what a specific theme looks like, they can all be found [here](https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss).
 
-I copied my theme from the `morph` theme, but then made some changes to the custom.scss associated with it. For an example of this theme, please look [here](https://github.com/KPDuBose/KPDuBose.github.io/blob/master/custom.scss).
+I copied my main website theme from the `morph` theme, but then made some changes to the *.scss file associated with it. For an example of this theme, please look [here](https://github.com/KPDuBose/KPDuBose.github.io/blob/master/custom.scss).
 
 ## Let's check it out
 
