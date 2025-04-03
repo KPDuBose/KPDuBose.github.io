@@ -136,58 +136,6 @@ No hablo español, pero estoy tratando de aprender.
 ¿Hablas ingles?
 : Do you speak English?
 
-<!-- # Even More Important Phrases -->
-
-<!-- ### -->
-
-<!-- Me tiraré un pedo en tu cara -->
-<!-- : I'll fart in your face -->
-
-<!-- <audio controls> -->
-<!--   <source src="me_tirare.m4a" type="audio/mp4"> -->
-<!--   Your browser does not support the audio element. -->
-<!-- </audio> -->
-
-<!-- ### -->
-
-<!-- Tienes trasero lleno de popó -->
-<!-- : You have a poopy butt -->
-
-<!-- <audio controls> -->
-<!--   <source src="tienes_cara.m4a" type="audio/mp4"> -->
-<!--   Your browser does not support the audio element. -->
-<!-- </audio> -->
-
-<!-- ### -->
-
-<!-- Nalga de popó -->
-<!-- : Poopy butt (literally, buttocks of poop) -->
-
-<!-- <audio controls> -->
-<!--   <source src="nalga_de_popo.m4a" type="audio/mp4"> -->
-<!--   Your browser does not support the audio element. -->
-<!-- </audio> -->
-
-<!-- ### -->
-
-<!-- Cara de nalga -->
-<!-- : Butt face -->
-
-<!-- <audio controls> -->
-<!--   <source src="cara.m4a" type="audio/mp4"> -->
-<!--   Your browser does not support the audio element. -->
-<!-- </audio> -->
-
-<!-- ### -->
-
-<!-- Tienes cara de nalga -->
-<!-- : You have a butt face -->
-
-<!-- <audio controls> -->
-<!--   <source src="tienes_cara.m4a" type="audio/mp4"> -->
-<!--   Your browser does not support the audio element. -->
-<!-- </audio> -->
-
 # Songs to Help Learn
 
 ## Con mi burito sabanero

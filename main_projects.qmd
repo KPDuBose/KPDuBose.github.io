@@ -8,4 +8,4 @@ listing:
 date: today
 ---
 
-A list of some of my past and current projects.
+A running list of past and current projects I can share. 
