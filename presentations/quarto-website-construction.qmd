@@ -19,17 +19,19 @@ editor_options:
 
 First, due credit where credit is due. The following document was heavily influenced by tutorials found on the [Quarto website](https://quarto.org/docs/websites/).
 
+Additionally, this tutorial does not go over how to set up a GitHub page. Please refer to the [Quickstart for GitHub Pages](https://docs.github.com/en/pages/quickstart) tutorial for help getting started hosting on GitHub pages. 
+
 # Prep Work
 
 First, I recommend making sure you have a current version of [R](https://cran.rstudio.com/), [RStudio](https://posit.co/download/rstudio-desktop/), and [Quarto](https://quarto.org/docs/get-started/). 
 
-Quarto and RStudio have been created by Posit. Quarto is essentially an updated version of RMarkdown files that have some different capabilites than it's predecessor. I would highly recommend looking ito it. Posit has mad numerous [tutorials](https://quarto.org/docs/get-started/hello/rstudio.html) about the framework. It's pretty cool. 
+Quarto and RStudio have been created by Posit. Quarto is essentially an updated version of RMarkdown files that have some different capabilities than it's predecessor. I would highly recommend looking into it. Posit has made numerous [tutorials](https://quarto.org/docs/get-started/hello/rstudio.html) about the framework. It's pretty cool. 
 
 # Getting Started
 
 ## Create a New Project
 
-Starting to create a webiste is pretty easy. You simple have to create a new project in RStudio. 
+Starting to create a website is pretty easy. You simple have to create a new project in RStudio. 
 
 1. Click on the new project button in the top left of the RStudio IDE. 
 2. Select new project
@@ -148,7 +150,7 @@ The "docs" folder contains the fully built website. When you push to GitHub, the
 
 ### .nojekyll file
 
-If you're hosting on GitHub, you need to include a .nojekyll file. 
+If you're hosting on GitHub, you need to include a .nojekyll file. (For reasons better explained [here](https://docs.github.com/en/pages/quickstart))
 
 You can include one by running the following line of cod in the command terminal
 
