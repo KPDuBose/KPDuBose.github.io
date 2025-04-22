@@ -124,19 +124,16 @@ Everything tells me it should work, but it hasn't yet:
 
 ## Hosting on GitHub pages
 
-### The docs folder
-
 If you plan to host on GitHub pages, there are a few tips.
 
-In the _quarto.yml file, include the following:
+### The docs folder
+
+In the _quarto.yml file you can specify an output directory with the `output-dir` option. While I think you can build the website by specifying the output-dir to really be anything, I prefer to build my website to a folder called `docs` and building the website from there, which I will detail in the next section. In the meantime, add this code to your _quarto.yml file:
 
 ```
-#| code-copy: true
----
 project:
   type: website
   output-dir: docs
----
 ```
 
 
@@ -144,9 +141,11 @@ I push my entire project including all of my .qmd files and images I used in mak
 
 ![Folders](website_construction_images/folders_after_render.png)
 
-The "docs" folder contains the fully built website. When you push to GitHub, there is an option to build from a specific branch and folder. Make sure you are building from the docs folder. 
+The "docs" folder should now contain all the files to make the website. When you push to GitHub, there is an option to build from a specific branch and folder. Make sure you are building from the docs folder. 
 
 ![Pages](website_construction_images/github_docs.png)
+
+If you aren't using git commands to push and pull from the repository, you just have to upload the new docs folder after each render. 
 
 ### .nojekyll file
 
@@ -258,6 +257,29 @@ Finding the icons associated with the quarto projects. They can be found on the 
 You can also include an error page. Unless you're doing something really fancy, you can just include a 404.qmd file. My [404.qmd](https://github.com/KPDuBose/KPDuBose.github.io/blob/master/404.qmd) is pretty basic, but it fits well with my theme. Here's what it looks like when you find [it](https://kpdubose.github.io/tournament-announcements/dubose-open2025.html).
 
 If you're doing something fancier, check out the [website navigation tutorial](https://quarto.org/docs/websites/website-navigation.html#pages-404)
+
+## Making a Blog
+
+A formatting option that you can include that renders pages as an index of other pages could be helpful. For an example of this, click [here](https://kpdubose.github.io/main_presentation.html) for the way my website incorporates it, [here](https://github.com/KPDuBose/KPDuBose.github.io/blob/master/main_presentation.qmd) too see my raw .qmd file, or [here](https://quarto.org/docs/websites/website-blog.html) for a detailed tutorial from Quarto. 
+
+When looking at the [.qmd source file](https://github.com/KPDuBose/KPDuBose.github.io/blob/master/main_presentation.qmd), we can see what the header looks like:
+
+```
+---
+title: "Presentations and Tutorials"
+listing: 
+  contents: presentations
+  type: grid
+---
+```
+
+Let's break this down a little bit. 
+
+- `title:` just names the webpage
+- `listing:` tells us that we want to create a list of other pages that looks kinda pretty. 
+    - `contents:` tells Quarto what folder to reference here. In this case I reference all .qmd files in my presentations folder. You can also reference specific files, as seen [here](https://quarto.org/docs/websites/website-listings.html#listing-contents).
+    - `type: grid` tells Quarto what style I want to use. Examples of other styles can be found [here](https://quarto.org/docs/websites/website-listings.html#listing-types). 
+
 
 ## That's it, for now
 
