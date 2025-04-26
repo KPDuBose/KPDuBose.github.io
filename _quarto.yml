@@ -16,6 +16,8 @@ website:
         text: About
       - href: main_projects.qmd
         text: Projects
+      - href: main_presentation.qmd
+        text: Presentations
   page-footer:
     background: light
     left:

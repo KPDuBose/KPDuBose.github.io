@@ -1,9 +1,8 @@
 [
   {
-    "listing": "/main_presentation.html",
+    "listing": "/main_projects.html",
     "items": [
-      "/presentations/quarto-website-construction.html",
-      "/presentations/spanish-class-nov2024.html"
+      "/projects/partyGames.html"
     ]
   },
   {
@@ -15,9 +14,11 @@
     ]
   },
   {
-    "listing": "/main_projects.html",
+    "listing": "/main_presentation.html",
     "items": [
-      "/projects/partyGames.html"
+      "/presentations/quarto-website-construction.html",
+      "/presentations/dl_models_overview.html",
+      "/presentations/spanish-class-nov2024.html"
     ]
   }
 ]
