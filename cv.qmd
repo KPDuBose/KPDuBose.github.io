@@ -82,7 +82,7 @@ tibble::tribble(
     cvevents(when = "dates", what = "degree", where = "uni", details = "details")
 ```
 
-# Reserach Experience
+# Research Experience
 
 ```{r}
 #| label: research
@@ -90,10 +90,10 @@ tibble::tribble(
 
 tibble::tribble(
   ~role, ~institution, ~date, ~details, ~tasks,
-  "Graduate Research Assistant", "University of Utah", "Aug. 2022 - Present", "placeholder", c("Help researchers assess statistical feasebility of research", 
-                                                                                               "\\textit{PT-IN-MIND}: NIH funded feaseability trial. Data safety monitor. Generated reports for IMC meetings. (2023 - Present)", 
+  "Graduate Research Assistant", "University of Utah", "Aug. 2022 - Present", "placeholder", c("Help researchers assess statistical feasibility of research", 
+                                                                                               "\\textit{PT-IN-MIND}: NIH funded feasibility trial. Data safety monitor. Generated reports for IMC meetings. (2023 - Present)", 
                                                                                                "\\textit{ImmPETUS}: Study conducted to examine the social health impacts of different cancers. Helped with numerous analyses and data cleaning. (2023 - 2024)",
-                                                                                               "\\textit{INTERSECT}: Study using flatiron data to examine socioeconimic differences in patients receiving immunotherapy. Helped with numerous analyses and data cleaning. (2023-2024)")
+                                                                                               "\\textit{INTERSECT}: Study using flatiron data to examine socioeconomic differences in patients receiving immunotherapy. Helped with numerous analyses and data cleaning. (2023-2024)")
   
 ) |>
   cvevents(when = "date", what = "role", where = "institution", details = "tasks")
@@ -106,7 +106,7 @@ tibble::tribble(
 #| output: asis
 tibble::tribble(
     ~role, ~institution, ~dates, ~details, ~tasks,
-    "Teaching Assistant - R Coding Bootcamp", "University of Utah", "June 2023 - Present", "DELPHI", c("Helped teach introductory and advanced R Coding Bootcamps", "Provided assitance, as needed, to participants in the bootcamps"),
+    "Teaching Assistant - R Coding Bootcamp", "University of Utah", "June 2023 - Present", "DELPHI", c("Helped teach introductory and advanced R Coding Bootcamps", "Provided assistance, as needed, to participants in the bootcamps"),
     "Teaching Assistant - Ordinary Differential Equations", "Utah State University", "Jan. 2022 - May 2022", "Dept. of Mathematics", c("Graded student assignments", "Hosted office hours"),
     "Recitation Leader - Introduction to Statistics", "Utah State University", "Aug. 2021 - May 2022", "Aggie Math Learning Center", c("Provided additional instruction to Introduction to Statistics course", "Tutored Students"),
     "Recitation Leader - Statistical Methods", "Utah State University", "Jan. 2021 - May 2021", "Aggie Math Learning Center", c("Provided additional instruction to Statistical Methods course", "Graded homework", "Tutored Students")
@@ -122,7 +122,7 @@ tibble::tribble(
 
 tibble::tribble(
   ~role, ~institution, ~dates, ~details, ~tasks,
-  "Judge at Student Reserach Conference", "Brigham Young University", "Mar. 2025", "Student research conference at BYU", c("Provided feedback on student reserach projects in the machine learning space.", "Selected session winners")
+  "Judge at Student Research Conference", "Brigham Young University", "Mar. 2025", "Student research conference at BYU", c("Provided feedback on student research projects in the machine learning space.", "Selected session winners")
 ) |>
     cvevents(when = "dates", what = "role", where = "institution", details = "tasks")
 ```
@@ -172,4 +172,3 @@ tibble::tribble(
 # References
 
 Available upon request
-
