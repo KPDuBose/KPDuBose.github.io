@@ -3,6 +3,7 @@ title: "Welcome"
 listing:
   contents:
     - "main_*.qmd"
+    - "tournament-announcements/*.qmd"
   type: table
   fields: [title]
 about:

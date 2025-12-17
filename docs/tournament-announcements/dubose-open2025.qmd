@@ -1,0 +1,31 @@
+---
+title: "DuBose Open"
+subtitle: "2025"
+---
+
+The DuBose Open has been hosted in Smithfield, UT since Dec. 2020. **This year the tournament will be held in Millcreek, Utah.**
+
+Registration for the tournament is open until Jan. 3, 2025.
+
+**The tournament will begin Jan. 4, 2025 at 5 pm.** 
+
+[Register](https://forms.gle/UyZ2MeYxfYnQi2pc9){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip" title="Register for the tournament"}
+
+# Rules
+
+The following rules will be implemented in the tournament. If you would like to contest a rule, please [contact me](mailto:kline.dubose@hotmail.com).
+
+1. Each participant must use a single joycon. This is for consistency among the participants.
+2. The tournament will be semi-double elimination. If you lose once, you move to the loser bracket. The winners of the loser’s bracket will compete for the last two spots in the final race. 
+  i) The only exception to the double elimination is the final race between the winners of the winner’s and loser’s bracket. This final race is all or nothing and the winners of the winner’s bracket will not be given another chance.
+3. Each match will consist of four races at 150cc. The top two racers move to the next match. Additionally, the following rules will be implemented:
+  i) CPU’s will be set to the highest difficulty.
+  ii) CPU vehicles will be set to any.
+  iii) Items will be set to frenzied.
+  iv) Track selection will be random. All race tracks, including DLC, will have equal chance of selection.
+  vi) If time restraints are present, the matches will consist of two races. All other rules remain the same. 
+4. Brackets will be randomly generated.
+5. Don’t be a poor sport. Being a poor sport will result in immediate disqualification with no chance of appeal. The following people can make a final and undisputed "poor sport" call:
+  i) The tournament organizer, Kline.
+  ii) Tournament judges: Cassadnra Corry, Nate Corry, and Jackson DuBose.
+6. The prize for winning the tournament is the glory of being the victor.

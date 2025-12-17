@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.30">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -69,14 +69,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-ad99bf5c6ca55958dd328ac9a15fd1ac.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-e3f2ff8dd48c4231483bc492bd3befcb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -116,6 +117,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Kline DuBose</span>
     </a>
@@ -214,28 +217,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>White Elephant Games</h1>
 <p>The following shows how to simulate a white elephant gift game utalizing a 6-sided die and a fair coin.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(partyGames)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(partyGames)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>games <span class="ot">&lt;-</span> <span class="fu">simulateElephant</span>(<span class="dv">15</span>, <span class="at">dice =</span> <span class="cn">TRUE</span>, <span class="at">coins =</span> <span class="dv">1</span>, <span class="at">iter =</span> <span class="dv">1500</span>, <span class="at">pheads =</span> <span class="fl">0.5</span>, <span class="at">sides =</span> <span class="dv">6</span>, <span class="at">numDice =</span> <span class="dv">1</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary.partyGames</span>(games)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary.partyGames</span>(games)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$winner
 winner
   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15 
-115 101 101  95  94 105 102 103 102  92  97 105 101  92  95 
+ 92  87 122  99 104 104  95 103 107  91  87  95 103 108 103 
 
 $moves
 moves
   -6   -5   -4   -3   -2   -1    1    2    3    4    5    6 
-1843 1866 1888 1920 1903 1890 1873 1848 1848 1900 1844 1877 
+1814 1919 1910 1806 1903 1931 1858 1814 1904 1854 1885 1902 
 
 attr(,"class")
 [1] "elphSum" "list"   </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(games)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(games)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "elphList" "list"    </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot.partyGames</span>(games)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot.partyGames</span>(games)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -243,70 +246,70 @@ attr(,"class")
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot.partyGames</span>(<span class="fu">summary.partyGames</span>(games))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot.partyGames</span>(<span class="fu">summary.partyGames</span>(games))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="monopoly-simulation" class="level1">
 <h1>Monopoly Simulation</h1>
 <p>Additionally, you can simulate Monopoly games based on the 2008 US version of the game.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(partyGames)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(partyGames)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>monopolyGame <span class="ot">&lt;-</span> <span class="fu">simulateMonopoly</span>()</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>monopolyGame</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>monopolyGame</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[1]]
- [1] 12 10 12 16 15 18 15 17 15 15 17 13 15 17 12 14 12 11 14 20 15 13 12 16 13
-[26] 14  8 17 13 11 16 20 14 11 23  9 13 15 23 16
+ [1] 14 12 13 12 13 17 13 20 12 13 27 11 15 17  9  8 19 13 19 12  9 19 20 20 16
+[26] 14 14 13 14 15 16 14 16 10 15 15 14  9 19 14
 
 [[2]]
- [1] 15  9 10 20 14 19 17  6 14 12 22 15  4 17 21 16 19 15 21 10 18 11 16 15 17
-[26] 16 14 15 14 15 14 14 13 18 15 19 20  9  6 14
+ [1] 14 16 13 15 11 15 10 13 18 12 18 19 14 10 15 16 13 10 21 14 14 17 14 13 14
+[26] 10 16 19 12 12 15 20 13 11 18 16 14 19  9 13
 
 [[3]]
- [1] 11 18 17 12  9 14 19 14 13  9 22 14 25 12 13 14  8  7 13 21 15 17 14 15 11
-[26] 21 11 14 16 16  9 15 17  8 14 20 16 16 13 12
+ [1] 16 12 20 13 19 12 12  7 15 11 20 18 11 26 18 11 11 15 15 14 15 17 16 13 21
+[26]  9 17  8 15 15 17 11 16 16 16 11 19 12 13  8
 
 [[4]]
- [1] 17 10 13 11 19 13 18  7 13 14 21 17 11 16 17 16 11 14 18 13 21 20 20  9 10
-[26] 17  8 17 11 17 18 20 13  7 11 13 15 19 11 15
+ [1] 15 15 17 14 11 17 15 11 14  9 21 16  9 17 14 19 11 14 17 15 22  7 14 17 16
+[26] 18 14 11 18 11  9 13 18 13 18 10 15 13 13 10
 
 [[5]]
- [1] 17 13 15 16 17 10 16 12 15 16 23 13 10 13 16 13 18 12 18 13 15 13 13 18 14
-[26] 16 13 18 13 17 11 15 13 14 12 17 11 13 13 19
+ [1] 18 14 10 14  8 14 18 23 19  7 19 11 21 17 17  8 18 20 20 19 16 15  7 15 16
+[26] 17 13 20 11 15 15 18 13 15 14 15 18 15 14 16
 
 [[6]]
- [1] 11 17 15 14  7 12 16 15 15 12 20 14 19 13 17 19  7 15 13 24 11 18 16 14 14
-[26] 18 13 15 15 19 16 16  9  6 16 14 18 12 17 12
+ [1] 14 10 14 12 13 14 20 15 11 18 16 13 13 15 18 14 16 13 10 22 14 22 12 18 18
+[26] 16 15 18 12 12 11 18 12 22  9 10 18 17 21  5
 
 [[7]]
- [1] 21  9 13 15 12 12 17 20 11 14 15 19  5 18 19 11 14 18 12 18 18 15 25 10 15
-[26] 18 14 17 11 16 11  9 19 14 14 16 15 14 16 13
+ [1]  8 17 13 15 14 15 13 22  7 16 27  8 15 15 11 15 12 19 15 12 15 13 18 14 20
+[26] 14 16 10 13 16 18 14 15  8 18 14 18 18 10 14
 
 [[8]]
- [1] 12 17 17 17  7 20 14 18 15 14 20 16 14 16 13 20 11 14 18 12 21 13  9 12 15
-[26] 14 20 15 13 15 14 13 16 14 14 16  6 16 19 13
+ [1] 15 14  7 15 19 11 12 16 10 14 31 13  8 19 14 13 14 18 15  9 18 17 14 15 12
+[26] 22 15 17 14 10 15 11 13 17 11 15 14 17 12 15
 
 [[9]]
- [1] 11 12 13 13 16 17 19 17 13 11 19 14 15 13 15 11 17 11 16 13 18 15 11 13 11
-[26] 22 15 20  8 13 13 18 15 14 15 11 12 22 10 14
+ [1] 14 12 16 13 14 17 15 10 12 14 25 10 13 14 17 15 14 12 11 17 20 18 14  7 14
+[26] 12 20 18 13 15  9 16  8 17 17 14 15 15 10 12
 
 [[10]]
- [1] 16 12 11 19 16 13 12 14 14 23 20 13 11 20 11 20 13 13 20 23 13 18 15 11  8
-[26] 18 17 14 14 13 20 15 12 15 16 13 14 16 13 12
+ [1]  6 14 14 13 19 17 12  6 13 13 22 13 17 19 11 14 13 11 15 20 17 16 15 15 13
+[26] 14 18 16 12 17 13 18 14 15 15 18 19 13 11 13
 
 attr(,"class")
 [1] "monopoly" "list"    </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary.monopoly</span>(monopolyGame)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary.monopoly</span>(monopolyGame)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20 
-143 127 136 153 132 148 163 140 138 140 199 148 129 155 154 154 130 130 163 167 
+134 136 137 136 141 149 140 143 131 127 226 132 136 169 144 133 141 145 158 154 
  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35  36  37  38  39  40 
-165 153 151 133 128 174 133 162 128 152 142 155 141 121 150 148 140 152 141 140 
+160 161 144 147 160 146 158 150 134 138 138 153 138 144 151 138 164 148 132 120 
 attr(,"class")
 [1] "monoSum" "numeric"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot.monopoly</span>(monopolyGame)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot.monopoly</span>(monopolyGame)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -317,22 +320,22 @@ attr(,"class")
 </div>
 <p>Parallel computing, through OpenMP, is also implemented as demonstrated here:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>monoParallel <span class="ot">&lt;-</span> <span class="fu">simulateMonopoly</span>(<span class="at">numGames =</span> <span class="dv">20</span>, </span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>monoParallel <span class="ot">&lt;-</span> <span class="fu">simulateMonopoly</span>(<span class="at">numGames =</span> <span class="dv">20</span>, </span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>                                 <span class="at">maxTurns =</span> <span class="dv">500</span>, </span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>                                 <span class="at">sides    =</span> <span class="dv">6</span>, </span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>                                 <span class="at">numDice  =</span> <span class="dv">2</span>, </span>
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>                                 <span class="at">cores    =</span> <span class="dv">3</span>)</span>
 <span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="fu">summary.monopoly</span>(monoParallel)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="fu">summary.monopoly</span>(monoParallel)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20 
-276 251 257 286 284 298 268 291 285 270 424 279 291 284 257 307 285 281 321 331 
+277 245 271 300 294 290 273 292 272 298 430 291 289 270 288 271 330 289 324 312 
  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35  36  37  38  39  40 
-310 327 324 274 313 284 296 282 285 286 285 292 287 297 289 294 309 281 256 302 
+321 326 300 293 286 302 279 293 290 290 271 301 288 307 295 288 267 281 285 300 
 attr(,"class")
 [1] "monoSum" "numeric"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot.monopoly</span>(monoParallel)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot.monopoly</span>(monoParallel)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -397,13 +400,14 @@ attr(,"class")
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
