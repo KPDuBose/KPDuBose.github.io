@@ -3,7 +3,7 @@ project:
   output-dir: docs
   render:
     - "*.qmd"
-    - "tournament-announcements/dubose-open2026.qmd"
+    - "!tournament-announcements/dubose-open2026.qmd"
     - "!tournament-announcements/dubose-open2025.qmd"
     - "!resumes/"
 
