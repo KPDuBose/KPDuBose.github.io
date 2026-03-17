@@ -1,6 +1,6 @@
 ---
 author: Kline DuBose
-title: Graduate Research Assistant, PhD Student
+title: Doctoral Student, Populaiton Health Sciences, Division of Biostatistics
 format:
   classic-cv-pdf: default
 cvfooter:
@@ -17,8 +17,8 @@ cvmeta:
     right: Salt Lake City, UT 84108
   - title: E-mail (work)
     left: kline.dubose@utah.edu
-  - title: E-mail
-    left: kline.dubose@hotmail.com
+  # - title: E-mail
+  #   left: kline.dubose@hotmail.com
 execute:
   echo: false
 editor_options: 
@@ -90,13 +90,38 @@ tibble::tribble(
 
 tibble::tribble(
   ~role, ~institution, ~date, ~details, ~tasks,
-  "Graduate Research Assistant", "University of Utah", "Aug. 2022 - Present", "placeholder", c("Help researchers assess statistical feasibility of research", 
-                                                                                               "\\textit{PT-IN-MIND}: NIH funded feasibility trial. Data safety monitor. Generated reports for IMC meetings. (2023 - Present)", 
-                                                                                               "\\textit{ImmPETUS}: Study conducted to examine the social health impacts of different cancers. Helped with numerous analyses and data cleaning. (2023 - 2024)",
-                                                                                               "\\textit{INTERSECT}: Study using flatiron data to examine socioeconomic differences in patients receiving immunotherapy. Helped with numerous analyses and data cleaning. (2023-2024)")
+  "Graduate Research Assistant", "University of Utah", "Aug 2022-Present", "placeholder", c("Collaborate on statistical design, analysis, and reporting for clinical and observational health studies", 
+                                                                                               "\\textit{AID}: AI tool development to simplify project assignment at the Biostatisitcs Core at the Huntsmand Cancer Institute. (2025-Present)",
+                                                                                               "\\textit{PT-IN-MIND}: NIH funded feasibility trial. Data safety monitor. Generated reports for IMC meetings. (2023-Present)", 
+                                                                                               "\\textit{ImmPETUS}: Study conducted to examine the social health impacts of different cancers. Conducted data cleaning, variable definition, and statistical analyses for cancer outcomes research. (2023-2024)",
+                                                                                               "\\textit{INTERSECT}: Study using flatiron data to examine socioeconomic differences in patients receiving immunotherapy. Conducted data cleaning, variable definition, and statistical analyses for cancer outcomes research. (2023-2024)")
   
 ) |>
   cvevents(when = "date", what = "role", where = "institution", details = "tasks")
+```
+
+# Publications
+
+```{r}
+#| label: publications
+#| output: asis
+tibble::tribble(
+  ~reference,
+  "Tay, D., \\textbf{Dubose, K.}, Chipman, J., Ellington, L., Alnajar, M., Iacob, E., Stephens, C., \\& Ornstein, K. A. Risk of Mental Health Conditions in Bereavement: A Population-Based Analysis of Lung Cancer Spouses. (2025). Frontiers in Public Health, 13, 1539180. https://doi.org/10.3389/fpubh.2025.1539180"
+) |> reference(ref = "reference")
+```
+
+# Presentations
+
+```{r}
+#| label: poster_presentations
+#| output: asis
+tibble::tribble(
+  ~reference,
+  "\\textbf{DuBose, K.}, Chipman, J., Villar, S., \\& Pin, L. (March 2026). Similarity Weighted Covariate Adjusted Response Adaptive (SW-CARA) Clinical Trials. Poster presentation at ENAR 2026 Spring Meeting, Indianapolis, IN.",
+  "Tay, DL, \\textbf{Dubose, K}, Chipman, J, Alnajar,M, Ellington, L, Iacob, E, Stephens, C, \\& Ornstein, KA. (September 2024). Risk of mental health disorders in bereavement: A population-based analysis of lung cancer spouses. Poster presentation at the National Center on Family Support’s 3rd Biennial Conference on Caregiving Research, Pittsburgh, PA.",
+  "Tay, D. L., \\textbf{Dubose, K.}, Meeks, H., Guo, J-W., Alekhina, N., Feldner, K., Sheng, X. Chipman, J., Ellington, L., \\& Hashibe, M.. (March, 2024). Inpatient and ED use among melanoma and lung cancer patients receiving immune checkpoint inhibitors. Poster presentation at the 2024 State of the Science in Hospice and Palliative Care, Phoenix, AZ."
+) |> reference(ref = "reference")
 ```
 
 # Teaching Experience
@@ -122,11 +147,16 @@ tibble::tribble(
 
 tibble::tribble(
   ~role, ~institution, ~dates, ~details, ~tasks,
+  "Chair at Student Research Conference", "Brigham Young University", "Feb. 2026", "Student research conference at BYU", c("Guided discussion on student research projects", "Assisted in selecting session winners")
+) |>
+  cvevents(when = "dates", what = "role", where = "institution", details = "tasks")
+
+tibble::tribble(
+  ~role, ~institution, ~dates, ~details, ~tasks,
   "Judge at Student Research Conference", "Brigham Young University", "Mar. 2025", "Student research conference at BYU", c("Provided feedback on student research projects in the machine learning space.", "Selected session winners")
 ) |>
     cvevents(when = "dates", what = "role", where = "institution", details = "tasks")
 ```
-
 
 # Technical Skills
 
@@ -135,39 +165,10 @@ tibble::tribble(
 #| output: asis
 tibble::tribble(
   ~skill, ~det,
-  "Programing Language", c("R", "SAS", "C++", "Python"),
-  "Language", c("English", "Spanish")
+  "Programming Languages", c("R", "SAS", "C++", "Python"),
+  "Languages", c("English (native)", "Spanish (conversational proficiency)")
 ) |> skills(what = "skill", details = "det")
 ```
-
-\newpage
-
-# Publications
-
-```{r}
-#| label: publications
-#| output: asis
-tibble::tribble(
-  ~reference,
-  "Tay, D., \\textbf{Dubose, K.}, Chipman, J., Ellington, L., Alnajar, M., Iacob, E., Stephens, C., \\& Ornstein, K. A. Risk of Mental Health Conditions in Bereavement: A Population-Based Analysis of Lung Cancer Spouses. (2025). Frontiers in Public Health, 13, 1539180. https://doi.org/10.3389/fpubh.2025.1539180"
-) |> reference(ref = "reference")
-```
-
-# Presentations
-
-```{r}
-#| label: poster_presentations
-#| output: asis
-tibble::tribble(
-  ~reference,
-  "Tay, DL, \\textbf{Dubose, K}, Chipman, J, Alnajar,M, Ellington, L, Iacob, E, Stephens, C, \\& Ornstein, KA. (September 2024). Risk of mental health disorders in bereavement: A population-based analysis of lung cancer spouses. Late breaker poster accepted to the National Center on Family Support’s 3rd Biennial Conference on Caregiving Research, Pittsburgh, PA.",
-  "Tay, D. L., \\textbf{Dubose, K.}, Meeks, H., Guo, J-W., Alekhina, N., Feldner, K., Sheng, X. Chipman, J., Ellington, L., \\& Hashibe, M.. (March, 2024). Inpatient and ED use among melanoma and lung cancer patients receiving immune checkpoint inhibitors. Poster accepted to the 2024 State of the Science in Hospice and Palliative Care, Phoenix, AZ."
-) |> reference(ref = "reference")
-```
-
-
-
-
 
 # References
 
