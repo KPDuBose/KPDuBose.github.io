@@ -1,8 +1,8 @@
 ---
-title: "Presentations and Tutorials"
+title: "Presentations and Publications"
 listing: 
   contents: presentations
   type: grid
 ---
 
-Presentations and tutorials I have done for different groups. Some of these pages are unrelated to my statistical interests, but follow other interests and can be helpful to other groups I have worked with and presented for. 
+Presentations, publications, and tutorials I have done for different groups all in a convenient location. Some of these pages are unrelated to my statistical interests, but help demonstrate other interests and expertise I have.

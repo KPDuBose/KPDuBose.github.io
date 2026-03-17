@@ -1,12 +1,12 @@
 ---
-title: "Welcome"
+title: "Kline DuBose"
 listing:
   contents:
-    - "main_*.qmd"
+    - "main_presentation.qmd"
   type: table
   fields: [title]
 about:
-  template: jolla
+  template: trestles
   image: dubose_headshot.jpg
   links:
     - icon: twitter-x
@@ -26,9 +26,32 @@ about:
       href: cv.qmd
 ---
 
-Welcome to my website! Here you will find previous projects, current projects I can share, contact information, and more!
+I am a PhD candidate in Biostatistics at the University of Utah, where I work as a Graduate Research Assistant. My research focuses on clinical trial methodology, with particular interests in adaptive trial design, covariate-adjusted response-adaptive randomization, and exact testing methods. Broadly, I am interested in developing statistical methods that make clinical trials more efficient, informative, and responsive to patient-level characteristics.
 
-If there are any questions, comments, or concerns, please feel free to [contact me](mailto:kline.dubose@utah.edu).
+My work includes both methodological and applied research. In methodological settings, I use simulation studies and statistical modeling to evaluate adaptive designs under a range of trial conditions. In applied collaborations, I contribute to study design, data analysis, and reporting across health-related research projects.
+
+## Education
+
+**University of Utah** | Salt Lake City, UT                                         
+PhD in Biostatistics | Aug 2022 - Present
+
+
+**Utah State University** | Logan, UT                                             
+B.S. in Statistics | Jan 2019 - May 2022
+
+## Experience
+
+**University of Utah** | Graduate Research Assistant | Aug 2022 - Present
+
+**University of Utah**, DELPHI | T.A. for R Coding Bootcamp | June 2023 - Present
+
+**Utah State University** | Recitation Leader, Teaching Assistant | Aug 2020 - May 2022
+
+## Welcome
+
+Welcome to my website. Here you can find information about my background, current work, and selected projects.
+
+Please feel free to [contact me](mailto:kline.dubose@utah.edu) with questions or collaboration inquiries.
 
 The following is currently available:
 

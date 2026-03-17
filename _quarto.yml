@@ -6,6 +6,8 @@ project:
     - "!tournament-announcements/dubose-open2026.qmd"
     - "!tournament-announcements/dubose-open2025.qmd"
     - "!resumes/"
+    - "!main_about.qmd"
+    - "!main_projects.qmd"
 
 website:
   title: "Kline DuBose"
@@ -13,10 +15,10 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: main_about.qmd
-        text: About
-      - href: main_projects.qmd
-        text: Projects
+      # - href: main_about.qmd
+      #   text: About
+      # - href: main_projects.qmd
+      #   text: Projects
       - href: main_presentation.qmd
         text: Presentations
   page-footer:
