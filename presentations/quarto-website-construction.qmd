@@ -267,7 +267,7 @@ When looking at the [.qmd source file](https://github.com/KPDuBose/KPDuBose.gith
 
 ```
 ---
-title: "Presentations and Tutorials"
+title: "Presentations and Publications"
 listing: 
   contents: presentations
   type: grid
@@ -281,12 +281,35 @@ Let's break this down a little bit.
     - `contents:` tells Quarto what folder to reference here. In this case I reference all .qmd files in my presentations folder. You can also reference specific files, as seen [here](https://quarto.org/docs/websites/website-listings.html#listing-contents).
     - `type: grid` tells Quarto what style I want to use. Examples of other styles can be found [here](https://quarto.org/docs/websites/website-listings.html#listing-types). 
 
+### Filter by categories
+
+Additionally, we can add a category label to the pages in our files and a filter based on topics. 
+
+```
+---
+title: "Presentations and Publications"
+listing: 
+  contents: presentations
+  type: grid
+  categories: true
+---
+```
+
+All that changes from the previous section is the addition of the `categories`. By using the `true` option, the sorting is numbered. All the categories are listed alphanumerically (I think) and lists the number of pages in each category. There are other options, such as an `unnumbered` or a `cloud` option, but I prefer the default.
+
+After this is updated, each page needs to have the `categories` option as well. It should look like:
+
+```
+categories: ["First category", "Maybe a second", "Look a third"]
+```
+
+Once those have been added, run `quarto render` from the terminal to reconstruct the website and use `quarto preview` to view it. (When I ran just `quarto preview`, it didn't always update the categories correctly.)
 
 ## That's it, for now
 
-That should be enough information to help you get started. Quarto is a versatile tool, and they have a lot of tutorials to help one get profecient at using it. 
+That should be enough information to help you get started. Quarto is a versatile tool, and they have a lot of tutorials to help one get proficient at using it. 
 
-Feel free to check out my [GitHub project](https://github.com/KPDuBose/KPDuBose.github.io/tree/master) and let me know if you have any question. 
+Feel free to check out my [GitHub project](https://github.com/KPDuBose/KPDuBose.github.io/tree/master) and let me know if you have any questions. 
 
 Good luck out there!
 
