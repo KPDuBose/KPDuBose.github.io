@@ -15,6 +15,7 @@ execute:
   cache: true
 editor_options: 
   chunk_output_type: console
+categories: ["Tutorial", "Coding"]
 ---
 
 First, due credit where credit is due. The following document was heavily influenced by tutorials found on the [Quarto website](https://quarto.org/docs/websites/).

@@ -17,6 +17,7 @@ execute:
   cache: true
 editor_options: 
   chunk_output_type: console
+categories: ["Tutorial"]
 ---
 
 # Introduction

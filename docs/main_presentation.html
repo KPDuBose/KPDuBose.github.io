@@ -80,9 +80,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -171,9 +171,9 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    </div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(6)</span></div><div class="category" data-category="Q29kaW5n">Coding <span class="quarto-category-count">(2)</span></div><div class="category" data-category="RU5BUg==">ENAR <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UG9zdGVy">Poster <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UHVibGljYXRpb25z">Publications <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UiUyMFBhY2thZ2U=">R Package <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmFuZG9taXphdGlvbg==">Randomization <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U29mdHdhcmUlMjBEZXZlbG9wbWVudA==">Software Development <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VHV0b3JpYWw=">Tutorial <span class="quarto-category-count">(2)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -203,7 +203,38 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-date-sort="1745359179000" data-listing-file-modified-sort="1745359179118" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1953">
+<div class="g-col-1" data-index="0" data-categories="UG9zdGVyJTJDRU5BUiUyQ1JhbmRvbWl6YXRpb24=" data-listing-date-sort="1773554400000" data-listing-file-modified-sort="1773847730824" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="11">
+<a href="./presentations/enar2026.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="presentations\dubose_swcara_poster_2026_print_ready.jpg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+ENAR Spring Meeting 2026
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('UG9zdGVy'); return false;">Poster</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('RU5BUg=='); return false;">ENAR</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('UmFuZG9taXphdGlvbg=='); return false;">Randomization</div>
+
+</div>
+<div class="card-text listing-description delink">
+The following poster was presented at the ENAR 2026 Spring Meeting.
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Various
+</div>
+<div class="listing-date">
+Mar 15, 2026
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="VHV0b3JpYWwlMkNDb2Rpbmc=" data-listing-date-sort="1773848067000" data-listing-file-modified-sort="1773848067930" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1953">
 <a href="./presentations/quarto-website-construction.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -213,6 +244,13 @@ window.Quarto = {
 <h5 class="no-anchor card-title listing-title">
 How to Make a Quarto Website
 </h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('VHV0b3JpYWw='); return false;">Tutorial</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Q29kaW5n'); return false;">Coding</div>
+
+</div>
 <div class="card-text listing-description delink">
 First, due credit where credit is due. The following document was heavily influenced by tutorials found on the Quarto website.
 </div>
@@ -221,13 +259,13 @@ First, due credit where credit is due. The following document was heavily influe
 Kline DuBose
 </div>
 <div class="listing-date">
-Apr 22, 2025
+Mar 18, 2026
 </div>
 </div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-listing-date-sort="1745637621000" data-listing-file-modified-sort="1745637621254" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="26" data-listing-word-count-sort="5200">
+<div class="g-col-1" data-index="2" data-listing-date-sort="1773848156000" data-listing-file-modified-sort="1773848156496" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="26" data-listing-word-count-sort="5200">
 <a href="./presentations/dl_models_overview.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -245,13 +283,13 @@ The purpose of this write up is to summarize my study and exploration of Neural 
 Kline DuBose
 </div>
 <div class="listing-date">
-Apr 25, 2025
+Mar 18, 2026
 </div>
 </div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-listing-date-sort="1746943200000" data-listing-file-modified-sort="1773784457325" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="20">
+<div class="g-col-1" data-index="3" data-categories="UHVibGljYXRpb25z" data-listing-date-sort="1746943200000" data-listing-file-modified-sort="1773847625559" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="20">
 <a href="./presentations/mental_health_bereavement.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -261,12 +299,17 @@ Apr 25, 2025
 <h5 class="no-anchor card-title listing-title">
 Risk of mental health conditions in bereavement
 </h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('UHVibGljYXRpb25z'); return false;">Publications</div>
+
+</div>
 <div class="card-text listing-description delink">
 This paper examines the risk of mental health conditions among spouses of lung cancer patients using population-based data.
 </div>
 <div class="card-attribution card-text-small justify">
 <div class="listing-author">
-Kline DuBose
+Various
 </div>
 <div class="listing-date">
 May 11, 2025
@@ -275,7 +318,7 @@ May 11, 2025
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="3" data-listing-date-sort="1743712069000" data-listing-file-modified-sort="1743712069556" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1688">
+<div class="g-col-1" data-index="4" data-categories="VHV0b3JpYWw=" data-listing-date-sort="1773848105000" data-listing-file-modified-sort="1773848105966" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1688">
 <a href="./presentations/spanish-class-nov2024.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -285,6 +328,11 @@ May 11, 2025
 <h5 class="no-anchor card-title listing-title">
 Spanish Cheat Sheet
 </h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('VHV0b3JpYWw='); return false;">Tutorial</div>
+
+</div>
 <div class="card-text listing-description delink">
 The following document covers basic grammar, important phrases, and songs to help you learn some basic Spanish.
 </div>
@@ -293,13 +341,13 @@ The following document covers basic grammar, important phrases, and songs to hel
 Kline DuBose
 </div>
 <div class="listing-date">
-Apr 3, 2025
+Mar 18, 2026
 </div>
 </div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="4" data-listing-date-sort="1741113318000" data-listing-file-modified-sort="1741113318148" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="263">
+<div class="g-col-1" data-index="5" data-categories="UiUyMFBhY2thZ2UlMkNTb2Z0d2FyZSUyMERldmVsb3BtZW50JTJDQ29kaW5n" data-listing-date-sort="1773848080000" data-listing-file-modified-sort="1773848080625" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="263">
 <a href="./presentations/partyGames.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -309,6 +357,15 @@ Apr 3, 2025
 <h5 class="no-anchor card-title listing-title">
 partyGames
 </h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('UiUyMFBhY2thZ2U='); return false;">R Package</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('U29mdHdhcmUlMjBEZXZlbG9wbWVudA=='); return false;">Software Development</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Q29kaW5n'); return false;">Coding</div>
+
+</div>
 <div class="card-text listing-description delink">
 The partyGames package was written to simulate different games under a variety of conditions.
 </div>
@@ -317,7 +374,7 @@ The partyGames package was written to simulate different games under a variety o
 Kline DuBose
 </div>
 <div class="listing-date">
-Mar 4, 2025
+Mar 18, 2026
 </div>
 </div>
 </div>

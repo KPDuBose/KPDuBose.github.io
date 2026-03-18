@@ -1,0 +1,13 @@
+---
+title: "ENAR Spring Meeting 2026"
+subtitle: "Similarity Weighted Covariate Adjusterd Response Adaptive (SW-CARA) Clinical Trials"
+author: "Various"
+date: 2026-03-15
+format: html
+categories: ["Poster", "ENAR", "Randomization"]
+---
+
+The following poster was presented at the ENAR 2026 Spring Meeting.
+
+![](dubose_swcara_poster_2026_print_ready.jpg)
+

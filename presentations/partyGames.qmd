@@ -4,6 +4,7 @@ subtitle: "A Simulation Package in R"
 date: last-modified
 author: "Kline DuBose"
 image: Board_Game_Dice_Roll.png
+categories: ["R Package", "Software Development", "Coding"]
 ---
 
 # partyGames

@@ -3,6 +3,7 @@ title: "Presentations and Publications"
 listing: 
   contents: presentations
   type: grid
+  categories: true
 ---
 
 Presentations, publications, and tutorials I have done for different groups all in a convenient location. Some of these pages are unrelated to my statistical interests, but help demonstrate other interests and expertise I have.
