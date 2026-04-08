@@ -11,6 +11,7 @@ project:
 
 website:
   title: "Kline DuBose"
+  favicon: "favicon.ico"
   navbar:
     left:
       - href: index.qmd
