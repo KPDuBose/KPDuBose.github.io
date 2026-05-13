@@ -1,19 +1,20 @@
 [
   {
+    "listing": "/index.html",
+    "items": [
+      "/main_presentation.html"
+    ]
+  },
+  {
     "listing": "/main_presentation.html",
     "items": [
+      "/presentations/alias_set_up_windows.html",
       "/presentations/enar2026.html",
       "/presentations/quarto-website-construction.html",
       "/presentations/dl_models_overview.html",
       "/presentations/mental_health_bereavement.html",
       "/presentations/spanish-class-nov2024.html",
       "/presentations/partyGames.html"
-    ]
-  },
-  {
-    "listing": "/index.html",
-    "items": [
-      "/main_presentation.html"
     ]
   }
 ]
